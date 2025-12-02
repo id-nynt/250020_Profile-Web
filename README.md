@@ -1,6 +1,7 @@
 # Janny Tran - Portfolio Website
 
 A multi-phase portfolio website showcasing my journey as a Computer Science graduate student and aspiring Software Developer.
+[Profile Website](https://250020-profile-web.vercel.app/)
 
 ## 📋 Navigation Menu
 
@@ -97,4 +98,4 @@ npm run dev
 - 📱 **Phone**: [0412 480 535](tel:0412480535)
 - 💼 **LinkedIn**: [janny-tran-a31621192](https://www.linkedin.com/in/janny-tran-a31621192)
 - 💻 **GitHub**: [id-nynt](https://github.com/id-nynt)
-- 🌐 **Live Website**: [https://id-nynt.github.io/250020_Profile-Web/](https://id-nynt.github.io/250020_Profile-Web/)
+- 🌐 **Live Website via Vercel**: [Profile Website](https://250020-profile-web.vercel.app/)
