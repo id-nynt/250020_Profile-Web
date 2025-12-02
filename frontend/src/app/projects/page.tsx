@@ -241,54 +241,27 @@ export default function ProjectsPage() {
                       : 'text-primary-600 hover:text-accent-600'
                   }`}
                 >
-                  Private ({professionalProjects})
+                  Personal ({professionalProjects})
                 </button>
               </div>
             </div>
 
             {/* Project Category Filter */}
             <div className="flex justify-center">
-              <div className="inline-flex bg-white rounded-lg border border-primary-200 p-1">
-                <button
-                  onClick={() => setActiveProjectCategory('all')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeProjectCategory === 'all'
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-primary-600 hover:text-primary-700'
-                  }`}
+              <div className="relative w-full md:w-auto">
+                <select
+                  value={activeProjectCategory}
+                  onChange={(e) => setActiveProjectCategory(e.target.value as 'all' | 'software' | 'data-ml' | 'cloud-networking')}
+                  className="appearance-none bg-white border border-primary-200 rounded-lg px-4 py-3 pr-8 text-sm font-medium text-primary-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 w-full md:min-w-[200px] h-12"
                 >
-                  All Categories
-                </button>
-                <button
-                  onClick={() => setActiveProjectCategory('software')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeProjectCategory === 'software'
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-primary-600 hover:text-primary-700'
-                  }`}
-                >
-                  Software/Web ({projectsByCategory.software.length})
-                </button>
-                <button
-                  onClick={() => setActiveProjectCategory('data-ml')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeProjectCategory === 'data-ml'
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-primary-600 hover:text-primary-700'
-                  }`}
-                >
-                  Data & ML ({projectsByCategory['data-ml'].length})
-                </button>
-                <button
-                  onClick={() => setActiveProjectCategory('cloud-networking')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeProjectCategory === 'cloud-networking'
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-primary-600 hover:text-primary-700'
-                  }`}
-                >
-                  Cloud & Networking ({projectsByCategory['cloud-networking'].length})
-                </button>
+                  <option value="all">All Categories</option>
+                  <option value="software">Software/Web ({projectsByCategory.software.length})</option>
+                  <option value="data-ml">Data & ML ({projectsByCategory['data-ml'].length})</option>
+                  <option value="cloud-networking">Cloud & Networking ({projectsByCategory['cloud-networking'].length})</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-primary-700">
+                  <ChevronDown className="h-4 w-4" />
+                </div>
               </div>
             </div>
           </div>
