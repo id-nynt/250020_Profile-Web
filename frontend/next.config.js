@@ -7,8 +7,8 @@ const nextConfig = {
     domains: ['localhost'],
   },
   // GitHub Pages deployment configuration
-  basePath: process.env.NODE_ENV === 'production' ? '/250020_Profile-Web' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/250020_Profile-Web/' : '',
+  basePath: '/250020_Profile-Web',
+  assetPrefix: '/250020_Profile-Web/',
 }
 
 module.exports = nextConfig
