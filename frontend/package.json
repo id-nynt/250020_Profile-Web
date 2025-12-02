@@ -2,15 +2,11 @@
   "name": "nhi-portfolio-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://id-nynt.github.io/250020_Profile-Web",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next build",
-    "predeploy": "npm run export",
-    "deploy": "gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
