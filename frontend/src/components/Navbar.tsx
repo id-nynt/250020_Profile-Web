@@ -24,7 +24,7 @@ const Navbar = () => {
               href="/" 
               className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity"
             >
-              Nhi Tran
+              Janny Tran
             </Link>
           </div>
 

@@ -76,7 +76,7 @@ const Hero = () => {
                 <div className="w-72 h-72 bg-white rounded-full overflow-hidden shadow-2xl relative">
                   <Image
                     src="/images/home/profile.jpg"
-                    alt="Nhi Tran Profile"
+                    alt="Janny Tran Profile"
                     fill
                     className="object-cover"
                     priority
