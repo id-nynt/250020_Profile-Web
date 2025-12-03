@@ -9,6 +9,7 @@ export interface Project {
   technologies: string[]
   githubUrl: string
   liveUrl?: string
+  projectUrl?: string
   team?: string
   role?: string
   responsibilities: string[]

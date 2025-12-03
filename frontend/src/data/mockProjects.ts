@@ -11,6 +11,7 @@ export const mockProjects: Project[] = [
     projectCategory: 'data-ml',
     technologies: ['Python', 'DistilGPT-2', 'GPT-Neo', 'TinyLlama', 'LoRA', 'RAG', 'Streamlit'],
     githubUrl: 'https://github.com/id-nynt/250021_shakespeare-chatbot',
+    projectUrl: 'https://250021shakespeare-chatbot.streamlit.app/',
     team: '3-person team',
     role: 'Team Coordinator & Technical Lead',
     responsibilities: [
@@ -38,6 +39,7 @@ export const mockProjects: Project[] = [
     projectCategory: 'software',
     technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'AWS'],
     githubUrl: 'https://github.com/id-nynt/250020_Profile-Web',
+    projectUrl: 'https://250020-profile-web.vercel.app/',
     team: 'Individual project',
     role: 'Full-stack Developer',
     responsibilities: [

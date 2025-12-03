@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ChevronDown, Github, ExternalLink, Filter } from 'lucide-react'
+import { ChevronDown, Github, ExternalLink, Filter, Computer } from 'lucide-react'
 import Image from 'next/image'
 import { Project } from '../../types/project'
 import { projectService } from '../../services/projectService'
@@ -26,6 +26,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </p>
           </div>
           <div className="flex gap-2 ml-4">
+            {project.projectUrl && (
+              <a
+                href={project.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent-600 hover:bg-accent-700 text-white rounded-full p-2 transition-colors shadow-sm"
+                title="View Project Demo"
+              >
+                <Computer size={16} />
+              </a>
+            )}
             <a
               href={project.githubUrl}
               target="_blank"
