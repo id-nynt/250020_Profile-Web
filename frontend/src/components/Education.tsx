@@ -34,7 +34,7 @@ const Education = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 bg-accent-50 rounded-lg">
                 <span className="font-medium text-primary-800">Current WAM</span>
-                <span className="text-2xl font-bold text-accent-600">89.25/100</span>
+                <span className="text-2xl font-bold text-accent-600">89.9/100</span>
               </div>
               
               <div className="p-4 bg-primary-50 rounded-lg">
