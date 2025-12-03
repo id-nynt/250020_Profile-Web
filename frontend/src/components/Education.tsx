@@ -40,9 +40,18 @@ const Education = () => {
               <div className="p-4 bg-primary-50 rounded-lg">
                 <h4 className="font-semibold text-primary-800 mb-2">Academic Status</h4>
                 <ul className="space-y-1 text-primary-700">
-                  <li>• Last-year student with high-distinction results</li>
-                  <li>• Consistently maintaining excellent academic performance</li>
-                  <li>• Strong foundation in software engineering principles</li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Last-year student with high-distinction results</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Consistently maintaining excellent academic performance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Strong foundation in software engineering principles</span>
+                  </li>
                 </ul>
               </div>
 
@@ -85,10 +94,22 @@ const Education = () => {
               <div className="p-4 bg-primary-50 rounded-lg">
                 <h4 className="font-semibold text-primary-800 mb-2">Transferable Skills</h4>
                 <ul className="space-y-1 text-primary-700">
-                  <li>• Project management and client interaction</li>
-                  <li>• Attention to detail and design thinking</li>
-                  <li>• Creative problem-solving approaches</li>
-                  <li>• Deadline management and documentation</li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Project management and client interaction</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Attention to detail and design thinking</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Creative problem-solving approaches</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Deadline management and documentation</span>
+                  </li>
                 </ul>
               </div>
 

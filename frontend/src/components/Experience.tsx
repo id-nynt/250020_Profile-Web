@@ -78,7 +78,7 @@ const Experience = () => {
                   <ul className="space-y-2">
                     {exp.responsibilities.map((resp, idx) => (
                       <li key={idx} className="flex items-start text-primary-700 text-sm">
-                        <span className="text-accent-600 mr-2">•</span>
+                        <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         <span>{resp}</span>
                       </li>
                     ))}

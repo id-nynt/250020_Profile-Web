@@ -105,18 +105,24 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
             <div>
               <h4 className="font-semibold text-primary-800 mb-2">Key Responsibilities</h4>
-              <ul className="list-disc list-inside text-sm text-primary-700 space-y-1">
+              <ul className="text-sm text-primary-700 space-y-1">
                 {project.responsibilities.map((responsibility, index) => (
-                  <li key={index}>{responsibility}</li>
+                  <li key={index} className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>{responsibility}</span>
+                  </li>
                 ))}
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold text-primary-800 mb-2">Outcomes</h4>
-              <ul className="list-disc list-inside text-sm text-primary-700 space-y-1">
+              <ul className="text-sm text-primary-700 space-y-1">
                 {project.outcomes.map((outcome, index) => (
-                  <li key={index}>{outcome}</li>
+                  <li key={index} className="flex items-start">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>{outcome}</span>
+                  </li>
                 ))}
               </ul>
             </div>

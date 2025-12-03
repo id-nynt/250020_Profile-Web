@@ -26,16 +26,16 @@ const Competitions = () => {
                 </p>
                 
                 <div className="space-y-2">
-                  <div className="flex items-center text-primary-700">
-                    <span className="text-accent-600 mr-2">•</span>
+                  <div className="flex items-start text-primary-700">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span>Team-based competitive programming</span>
                   </div>
-                  <div className="flex items-center text-primary-700">
-                    <span className="text-accent-600 mr-2">•</span>
+                  <div className="flex items-start text-primary-700">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span>24-hour continuous problem solving</span>
                   </div>
-                  <div className="flex items-center text-primary-700">
-                    <span className="text-accent-600 mr-2">•</span>
+                  <div className="flex items-start text-primary-700">
+                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span>Global competition with international ranking</span>
                   </div>
                 </div>
