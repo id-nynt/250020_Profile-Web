@@ -3,34 +3,6 @@ import { Project } from '../types/project'
 // Phase 1: Mock data that mirrors the exact structure needed for Phase 2+
 export const mockProjects: Project[] = [
   {
-    id: 'shakespeare-chatbot',
-    title: '(Uni) Shakespeare Literature Chatbot',
-    shortDescription: 'Built a domain specific intelligent chatbot to answer questions about Shakespeare\'s plays.',
-    fullDescription: 'Developed an advanced chatbot using small language models and RAG (Retrieval-Augmented Generation) to provide accurate, contextual answers about Shakespeare\'s literary works. The system combines fine-tuning techniques with efficient retrieval systems.',
-    category: 'academic',
-    projectCategory: 'data-ml',
-    technologies: ['Python', 'DistilGPT-2', 'GPT-Neo', 'TinyLlama', 'LoRA', 'RAG', 'Streamlit'],
-    githubUrl: 'https://github.com/id-nynt/250021_shakespeare-chatbot',
-    projectUrl: 'https://250021shakespeare-chatbot.streamlit.app/',
-    team: '3-person team',
-    role: 'Team Coordinator & Technical Lead',
-    responsibilities: [
-      'Coordinated team workflow and technical decisions',
-      'Automated text cleaning, scene summarisation, and metadata extraction',
-      'Fine-tuned multiple language models using LoRA',
-      'Implemented RAG system for fast, accurate retrieval'
-    ],
-    outcomes: [
-      'Delivered functional Shakespearean chatbot',
-      'Successfully fine-tuned TinyLlama + RAG pipeline',
-      'Achieved accurate factual query responses'
-    ],
-    period: '03/2025 - 06/2025',
-    imageUrl: '/images/projects/shakespeare-chatbot.png',
-    featured: true,
-    status: 'completed'
-  },
-  {
     id: 'portfolio-website',
     title: 'Personal Portfolio Website',
     shortDescription: 'Built a fully responsive portfolio to showcase skills, resume, and projects.',
@@ -39,7 +11,7 @@ export const mockProjects: Project[] = [
     projectCategory: 'software',
     technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'AWS'],
     githubUrl: 'https://github.com/id-nynt/250020_Profile-Web',
-    //projectUrl: 'https://250020-profile-web.vercel.app/',
+    projectUrl: 'https://250020-profile-web.vercel.app/',
     team: 'Individual project',
     role: 'Full-stack Developer',
     responsibilities: [
@@ -55,6 +27,34 @@ export const mockProjects: Project[] = [
     ],
     period: '11/2025 - 12/2025',
     imageUrl: '/images/projects/portfolio-website.png',
+    featured: true,
+    status: 'completed'
+  },
+    {
+    id: 'shakespeare-chatbot',
+    title: '(Uni) Shakespeare Literature Chatbot',
+    shortDescription: 'Built a domain specific intelligent chatbot to answer questions about Shakespeare\'s plays.',
+    fullDescription: 'Developed an advanced chatbot using small language models and RAG (Retrieval-Augmented Generation) to provide accurate, contextual answers about Shakespeare\'s literary works. The system combines fine-tuning techniques with efficient retrieval systems.',
+    category: 'academic',
+    projectCategory: 'data-ml',
+    technologies: ['Python', 'DistilGPT-2', 'GPT-Neo', 'TinyLlama', 'LoRA', 'RAG', 'Streamlit'],
+    githubUrl: 'https://github.com/id-nynt/250021_shakespeare-chatbot',
+    // projectUrl: 'https://250021shakespeare-chatbot.streamlit.app/',
+    team: '3-person team',
+    role: 'Team Coordinator & Technical Lead',
+    responsibilities: [
+      'Coordinated team workflow and technical decisions',
+      'Automated text cleaning, scene summarisation, and metadata extraction',
+      'Fine-tuned multiple language models using LoRA',
+      'Implemented RAG system for fast, accurate retrieval'
+    ],
+    outcomes: [
+      'Delivered functional Shakespearean chatbot',
+      'Successfully fine-tuned TinyLlama + RAG pipeline',
+      'Achieved accurate factual query responses'
+    ],
+    period: '03/2025 - 06/2025',
+    imageUrl: '/images/projects/shakespeare-chatbot.png',
     featured: true,
     status: 'completed'
   },
