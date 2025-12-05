@@ -39,7 +39,7 @@ export const mockProjects: Project[] = [
     projectCategory: 'software',
     technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'AWS'],
     githubUrl: 'https://github.com/id-nynt/250020_Profile-Web',
-    projectUrl: 'https://250020-profile-web.vercel.app/',
+    //projectUrl: 'https://250020-profile-web.vercel.app/',
     team: 'Individual project',
     role: 'Full-stack Developer',
     responsibilities: [
