@@ -124,6 +124,45 @@ const Education = () => {
           </div>
         </div>
 
+        {/* Technical Mentorship Program */}
+        <div className="mt-12 bg-white rounded-lg p-8 shadow-sm border border-primary-200">
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold text-primary-800 mb-2">
+              Technical Mentorship Program – Software Engineering
+            </h3>
+            <div className="text-accent-600 font-semibold text-lg mb-2">
+              Jung Talents | 2025
+            </div>
+            <p className="text-primary-600 mb-4">
+              Participated in a structured mentorship program focused on transitioning into software engineering roles
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="p-4 bg-primary-50 rounded-lg">
+              <h4 className="font-semibold text-primary-800 mb-3">Key Learning Outcomes</h4>
+              <ul className="space-y-2 text-primary-700">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span>Received guidance on full-stack development, system design basics, and cloud computing</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span>Built and refined multiple academic and personal projects (React, ASP.NET, REST APIs, AWS) with regular feedback</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span>Improved GitHub organization, portfolio presentation, and job application strategy</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span>Discussed real-world software engineering expectations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Additional Academic Information */}
         <div className="mt-12 bg-white rounded-lg p-8 shadow-sm border border-primary-200">
           <h3 className="text-xl font-semibold text-primary-800 mb-6 text-center">
