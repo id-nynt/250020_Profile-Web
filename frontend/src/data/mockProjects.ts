@@ -1,14 +1,14 @@
 import { Project } from '../types/project'
 
-// Phase 1: Mock data that mirrors the exact structure needed for Phase 2+
+// Phase 1: Mock data for projects
 export const mockProjects: Project[] = [
   {
     id: 'nhan-van-ielts',
     title: 'Nhan Van IELTS Practice Platform',
-    shortDescription: 'Building an IELTS practice platform with interactive learning features.',
-    fullDescription: 'Currently developing a comprehensive IELTS practice platform to help students prepare for the IELTS examination. The platform includes practice tests, vocabulary building, and progress tracking features.',
-    problem: 'IELTS candidates need accessible, interactive practice tools with instant feedback and progress tracking to prepare effectively for the examination.',
-    approach: 'Built a responsive platform using React and Next.js with Tailwind CSS. Implemented interactive practice test components, real-time progress tracking, and user authentication.',
+    shortDescription: 'Developing an IELTS practice platform with interactive learning features.',
+    fullDescription: 'Joined as a junior developer in a professional team to build a comprehensive IELTS practice platform to help students prepare for the IELTS examination. The platform includes practice tests, vocabulary building, and progress tracking features.',
+    problem: 'Implement backend APIs and frontend components to create an interactive learning experience for IELTS students, ensuring responsiveness and usability across devices.',
+    approach: 'Collaborated with a team of developers, received tasks from product owner and follow Agile methodologies to deliver features incrementally. Focused on building blogs features with ASP.NET, reusable components and ensuring responsive design with React Tailwind CSS. Learned and applied best practices in code quality, GitHub workflow, CI/CD, and DevOps.',
     outcome: 'Created an intuitive learning platform enabling students to practice and track their IELTS preparation progress with clean, maintainable code.',
     category: 'commercial',
     projectCategory: 'software',
@@ -17,9 +17,9 @@ export const mockProjects: Project[] = [
     team: 'Software development team',
     role: 'Full-stack Developer',
     responsibilities: [
-      'Successfully implemented frontend using React and Tailwind CSS',
+      'Successfully implemented Backend APIs for blog management using ASP.NET',
       'Built interactive practice test components with real-time feedback',
-      'Implemented progress tracking and user feedback systems',
+      'Integrated frontend with backend services for seamless data flow',
       'Created responsive design for all device sizes'
     ],
     period: '10/2025 - Current',
@@ -59,14 +59,14 @@ export const mockProjects: Project[] = [
     title: '(University) Shakespeare Literature Chatbot',
     shortDescription: 'Built a domain-specific intelligent chatbot to answer questions about Shakespeare\'s plays using RAG.',
     fullDescription: 'Independently designed and built an end-to-end AI system, structuring raw text data into retrievable formats and integrating RAG to improve answer accuracy and relevance. Demonstrated strong self-learning by iteratively refining prompts, data chunking, and system architecture.',
-    problem: 'Chatbots often hallucinate answers when lacking grounding in source material. Needed an accurate, fact-based system specifically for Shakespeare literature that could retrieve relevant play excerpts to support responses.',
+    problem: 'Chatbots often hallucinate answers when lacking grounding in source material. Needed an accurate, fact-based system specifically for Shakespeare literature that could retrieve relevant play excerpts to support responses. This project required self-learning of the process of building a chatbot from scratch.',
     approach: 'Python, RAG (Retrieval-Augmented Generation), FAISS for vector search, and small language models (TinyLlama). Structured Shakespeare texts into searchable vector embeddings, implemented a retrieval layer to fetch relevant passages, and used LLMs to generate contextual answers.',
     outcome: 'Successfully built a reliable Shakespeare chatbot that grounds answers in actual play text. Significantly reduced hallucinations through RAG implementation. Achieved production-ready architecture with iterative refinement.',
     category: 'academic',
     projectCategory: 'data-ml',
     technologies: ['Python', 'RAG', 'FAISS', 'TinyLlama', 'Streamlit'],
     githubUrl: 'https://github.com/id-nynt/250021_shakespeare-chatbot',
-    demoUrl: 'https://shakespeare-chatbot.streamlit.app/',
+    demoUrl: 'frontend/public/video/projects/shakespeare-chatbot-demo.mp4',
     team: 'Individual project',
     role: 'Lead Developer & Architect',
     responsibilities: [

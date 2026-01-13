@@ -12,7 +12,7 @@ import {
 export interface ProjectService {
   getAllProjects(): Promise<Project[]>
   getProjectById(id: string): Promise<Project | null>
-  getProjectsByCategory(category: 'academic' | 'professional' | 'all'): Promise<Project[]>
+  getProjectsByCategory(category: 'academic' | 'personal' | 'commercial' | 'all'): Promise<Project[]>
   getProjectsByType(projectCategory: 'software' | 'data-ml' | 'cloud-networking' | 'all'): Promise<Project[]>
   getFeaturedProjects(): Promise<Project[]>
   // Phase 2+ methods (will return empty/default for Phase 1)
@@ -36,7 +36,7 @@ class MockProjectService implements ProjectService {
     return getMockProjectById(id) || null
   }
 
-  async getProjectsByCategory(category: 'academic' | 'professional' | 'all'): Promise<Project[]> {
+  async getProjectsByCategory(category: 'academic' | 'personal' | 'commercial' | 'all'): Promise<Project[]> {
     await new Promise(resolve => setTimeout(resolve, 75))
     return getMockProjectsByCategory(category)
   }
