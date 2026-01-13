@@ -345,7 +345,10 @@ export default function ProjectsPage() {
             <div className="flex justify-center">
               <div className="inline-flex bg-white rounded-lg border border-primary-200 p-1">
                 <button
-                  onClick={() => setActiveCategory('all')}
+                  onClick={() => {
+                    setActiveCategory('all')
+                    setActiveProjectCategory('all')
+                  }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'all'
                       ? 'bg-accent-100 text-accent-700'
@@ -355,7 +358,10 @@ export default function ProjectsPage() {
                   All Projects ({projects.length})
                 </button>
                 <button
-                  onClick={() => setActiveCategory('academic')}
+                  onClick={() => {
+                    setActiveCategory('academic')
+                    setActiveProjectCategory('all')
+                  }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'academic'
                       ? 'bg-accent-100 text-accent-700'
@@ -365,7 +371,10 @@ export default function ProjectsPage() {
                   Academic ({academicProjects})
                 </button>
                 <button
-                  onClick={() => setActiveCategory('personal')}
+                  onClick={() => {
+                    setActiveCategory('personal')
+                    setActiveProjectCategory('all')
+                  }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'personal'
                       ? 'bg-accent-100 text-accent-700'
@@ -375,7 +384,10 @@ export default function ProjectsPage() {
                   Personal ({personalProjects})
                 </button>
                 <button
-                  onClick={() => setActiveCategory('commercial')}
+                  onClick={() => {
+                    setActiveCategory('commercial')
+                    setActiveProjectCategory('all')
+                  }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'commercial'
                       ? 'bg-accent-100 text-accent-700'
@@ -438,44 +450,6 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        {/* 4. Tech Stack */}
-        <div className="mb-16">
-          <div className="bg-white rounded-lg p-8 shadow-sm border border-primary-200">
-            <h3 className="text-2xl font-semibold text-primary-800 mb-6">🔧 Tech Stack</h3>
-            <div className="space-y-4 text-primary-700">
-              <div className="flex items-start gap-3">
-                <span className="text-xl">💻</span>
-                <div>
-                  <span className="font-semibold">Languages:</span> Python, JavaScript, C#.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-xl">⚛️</span>
-                <div>
-                  <span className="font-semibold">Frameworks:</span> React.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-xl">🗄️</span>
-                <div>
-                  <span className="font-semibold">Databases:</span> MySQL.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-xl">☁️</span>
-                <div>
-                  <span className="font-semibold">Cloud & DevOps:</span> AWS (EC2, S3, IAM), Docker, CI/CD basics.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-xl">🛠️</span>
-                <div>
-                  <span className="font-semibold">Tools:</span> Git, GitHub, VS Code, Jupyter Notebook.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
       
