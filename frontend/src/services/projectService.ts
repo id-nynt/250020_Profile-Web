@@ -72,7 +72,7 @@ class ApiProjectService implements ProjectService {
     return data.success ? data.data : null
   }
 
-  async getProjectsByCategory(category: 'academic' | 'professional' | 'all'): Promise<Project[]> {
+  async getProjectsByCategory(category: 'academic' | 'personal' | 'commercial' | 'all'): Promise<Project[]> {
     const url = category === 'all' 
       ? `${this.baseUrl}/projects`
       : `${this.baseUrl}/projects?category=${category}`
