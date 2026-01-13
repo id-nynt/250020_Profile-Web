@@ -66,7 +66,7 @@ export const mockProjects: Project[] = [
     projectCategory: 'data-ml',
     technologies: ['Python', 'RAG', 'FAISS', 'TinyLlama', 'Streamlit'],
     githubUrl: 'https://github.com/id-nynt/250021_shakespeare-chatbot',
-    demoUrl: 'frontend/public/video/projects/shakespeare-chatbot-demo.mp4',
+    demoUrl: '/video/projects/shakespeare-chatbot-demo.mp4',
     team: 'Individual project',
     role: 'Lead Developer & Architect',
     responsibilities: [
