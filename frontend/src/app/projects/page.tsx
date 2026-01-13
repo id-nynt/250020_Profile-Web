@@ -10,142 +10,255 @@ import Footer from '@/components/Footer'
 
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-primary-200 hover:shadow-md transition-all duration-300">
-      <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <div className="flex-1">
-            <h3 className="text-xl font-semibold text-primary-800 mb-2">
+    <>
+      <div className="bg-white rounded-lg shadow-sm border border-primary-200 hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col">
+        <div className="p-6 flex-1 flex flex-col">
+          {/* Header: Title & Period */}
+          <div className="mb-3">
+            <h3 className="text-xl font-semibold text-primary-800 mb-1">
               {project.title}
             </h3>
-            <p className="text-primary-600 text-sm mb-2">{project.period}</p>
-            <p className="text-primary-700 leading-relaxed">
-              {project.shortDescription}
-            </p>
+            <p className="text-primary-600 text-sm">{project.period}</p>
           </div>
-          <div className="flex gap-2 ml-4">
+
+          {/* Introduction */}
+          <p className="text-primary-700 leading-relaxed mb-4 flex-grow">
+            {project.shortDescription}
+          </p>
+
+          {/* Tech Stack Tags */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-accent-100 text-accent-700 text-sm rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* Project Image */}
+          {project.imageUrl && (
+            <div className="mb-4 -mx-6 px-6">
+              <div className="w-full h-40 bg-primary-100 rounded-lg overflow-hidden relative border border-gray-300">
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Action Buttons */}
+          <div className="flex gap-2 mb-4 flex-wrap">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
+              >
+                <ExternalLink size={16} className="mr-2" />
+                View Demo
+              </a>
+            )}
             {project.projectUrl && (
               <a
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent-600 hover:bg-accent-700 text-white rounded-full p-2 transition-colors shadow-sm"
-                title="View Project Demo"
+                className="inline-flex items-center px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg transition-colors font-medium text-sm"
               >
-                <Computer size={16} />
+                <ExternalLink size={16} className="mr-2" />
+                View Live
               </a>
             )}
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-900 hover:bg-gray-800 text-white rounded-full p-2 transition-colors shadow-sm"
-              title="View on GitHub"
+              className="inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors font-medium text-sm"
             >
-              <Github size={16} />
+              <Github size={16} className="mr-2" />
+              View Code
             </a>
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-600 hover:text-accent-600 transition-colors"
-                title="View Live Demo"
-              >
-                <ExternalLink size={20} />
-              </a>
-            )}
           </div>
+
+          {/* Project Details Button */}
+          <button
+            onClick={() => setShowModal(true)}
+            className="text-accent-600 hover:text-accent-700 font-medium transition-colors"
+          >
+            Project Details
+          </button>
         </div>
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 bg-accent-100 text-accent-700 text-sm rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium transition-colors"
-        >
-          <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
-          <ChevronDown
-            size={16}
-            className={`transform transition-transform ${
-              isExpanded ? 'rotate-180' : ''
-            }`}
-          />
-        </button>
-
-        {isExpanded && (
-          <div className="mt-4 pt-4 border-t border-primary-200 space-y-4">
-            {/* Project Image */}
-            {project.imageUrl && (
-              <div className="mb-4">
-                <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden relative border border-gray-300">
-                  <Image
-                    src={project.imageUrl}
-                    alt={project.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-            )}
-
-            <div>
-              <h4 className="font-semibold text-primary-800 mb-2">Project Details</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="font-medium text-primary-700">Team:</span>
-                  <span className="text-primary-600 ml-2">{project.team}</span>
-                </div>
-                <div>
-                  <span className="font-medium text-primary-700">Role:</span>
-                  <span className="text-primary-600 ml-2">{project.role}</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-primary-800 mb-2">Key Responsibilities</h4>
-              <ul className="text-sm text-primary-700 space-y-1">
-                {project.responsibilities.map((responsibility, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>{responsibility}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-primary-800 mb-2">Outcomes</h4>
-              <ul className="text-sm text-primary-700 space-y-1">
-                {project.outcomes.map((outcome, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>{outcome}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
       </div>
-    </div>
+
+      {/* Project Details Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center p-4 pt-20">
+          <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[calc(100vh-100px)] flex flex-col">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-primary-200 flex-shrink-0 bg-white rounded-t-lg">
+              <h2 className="text-2xl font-bold text-primary-800">{project.title}</h2>
+              <button
+                onClick={() => setShowModal(false)}
+                className="text-primary-600 hover:text-primary-800 text-2xl font-bold leading-none"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 space-y-6 overflow-y-auto flex-1">
+              {/* Project Overview Section */}
+              <div className="space-y-4">
+                {/* Time & Introduction */}
+                <div>
+                  <p className="text-primary-600 text-sm font-medium mb-2">{project.period}</p>
+                  <p className="text-primary-700 leading-relaxed">{project.shortDescription}</p>
+                </div>
+
+                {/* Tech Stack Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-accent-100 text-accent-700 text-sm rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Project Image */}
+                {project.imageUrl && (
+                  <div className="w-full h-60 bg-primary-100 rounded-lg overflow-hidden relative border border-gray-300">
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+
+              {/* Project Details */}
+              <div className="bg-primary-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-primary-800 mb-3">Project Details</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="font-medium text-primary-700">Type:</span>
+                    <span className="text-primary-600 ml-2">{project.team}</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-primary-700">Role:</span>
+                    <span className="text-primary-600 ml-2">{project.role}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Problem */}
+              {project.problem && (
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+                  <h3 className="font-semibold text-primary-800 mb-2 flex items-center">
+                    <span className="text-red-600 mr-2">🎯</span>
+                    Problem
+                  </h3>
+                  <p className="text-primary-700 text-sm">{project.problem}</p>
+                </div>
+              )}
+
+              {/* Approach */}
+              {project.approach && (
+                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                  <h3 className="font-semibold text-primary-800 mb-2 flex items-center">
+                    <span className="text-purple-600 mr-2">🛠️</span>
+                    Approach
+                  </h3>
+                  <p className="text-primary-700 text-sm">{project.approach}</p>
+                </div>
+              )}
+
+              {/* Key Responsibilities */}
+              {project.responsibilities.length > 0 && (
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                  <h3 className="font-semibold text-primary-800 mb-3 flex items-center">
+                    <span className="mr-2">📋</span>
+                    Key Responsibilities
+                  </h3>
+                  <ul className="text-sm text-primary-700 space-y-2">
+                    {project.responsibilities.map((responsibility, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span>{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Outcome Summary */}
+              {project.outcome && (
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <h3 className="font-semibold text-primary-800 mb-2">Outcome</h3>
+                  <p className="text-primary-700 text-sm">{project.outcome}</p>
+                </div>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-6 border-t border-primary-200 flex gap-3 justify-end bg-primary-50 rounded-b-lg flex-shrink-0 flex-wrap">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
+                >
+                  <ExternalLink size={16} className="mr-2" />
+                  View Demo
+                </a>
+              )}
+              {project.projectUrl && (
+                <a
+                  href={project.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg transition-colors font-medium text-sm"
+                >
+                  <ExternalLink size={16} className="mr-2" />
+                  View Live
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors font-medium text-sm"
+                >
+                  <Github size={16} className="mr-2" />
+                  View Code
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
 export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'academic' | 'professional'>('all')
+  const [activeCategory, setActiveCategory] = useState<'all' | 'academic' | 'personal' | 'commercial'>('all')
   const [activeProjectCategory, setActiveProjectCategory] = useState<'all' | 'software' | 'data-ml' | 'cloud-networking'>('all')
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
@@ -174,7 +287,8 @@ export default function ProjectsPage() {
   })
 
   const academicProjects = projects.filter(p => p.category === 'academic').length
-  const professionalProjects = projects.filter(p => p.category === 'professional').length
+  const personalProjects = projects.filter(p => p.category === 'personal').length
+  const commercialProjects = projects.filter(p => p.category === 'commercial').length
 
   const projectsByCategory = {
     software: projects.filter(p => p.projectCategory === 'software'),
@@ -251,14 +365,24 @@ export default function ProjectsPage() {
                   Academic ({academicProjects})
                 </button>
                 <button
-                  onClick={() => setActiveCategory('professional')}
+                  onClick={() => setActiveCategory('personal')}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeCategory === 'professional'
+                    activeCategory === 'personal'
                       ? 'bg-accent-100 text-accent-700'
                       : 'text-primary-600 hover:text-accent-600'
                   }`}
                 >
-                  Personal ({professionalProjects})
+                  Personal ({personalProjects})
+                </button>
+                <button
+                  onClick={() => setActiveCategory('commercial')}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    activeCategory === 'commercial'
+                      ? 'bg-accent-100 text-accent-700'
+                      : 'text-primary-600 hover:text-accent-600'
+                  }`}
+                >
+                  Commercial ({commercialProjects})
                 </button>
               </div>
             </div>

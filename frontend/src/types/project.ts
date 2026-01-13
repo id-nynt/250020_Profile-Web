@@ -4,16 +4,20 @@ export interface Project {
   title: string
   shortDescription: string
   fullDescription?: string
-  category: 'academic' | 'professional'
+  problem?: string
+  approach?: string
+  outcome?: string
+  category: 'academic' | 'personal' | 'commercial'
   projectCategory: 'software' | 'data-ml' | 'cloud-networking'
   technologies: string[]
-  githubUrl: string
-  liveUrl?: string
+  githubUrl?: string
+  demoUrl?: string
   projectUrl?: string
+  liveUrl?: string
   team?: string
   role?: string
   responsibilities: string[]
-  outcomes: string[]
+  outcomes?: string[]
   period: string
   imageUrl?: string
   featured?: boolean
@@ -37,7 +41,7 @@ export interface ProjectResponse extends ApiResponse<Project> {}
 
 // Filter and pagination types for Phase 2+
 export interface ProjectFilters {
-  category?: 'academic' | 'professional' | 'all'
+  category?: 'academic' | 'personal' | 'commercial' | 'all'
   projectCategory?: 'software' | 'data-ml' | 'cloud-networking' | 'all'
   technologies?: string[]
   status?: 'completed' | 'in-progress' | 'planning'

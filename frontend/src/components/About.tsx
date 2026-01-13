@@ -12,29 +12,30 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-primary-800 mb-4">
-              Software Developer with a Passion for Innovation
+              Junior Software Engineer with System Thinking
             </h3>
             
             <p className="text-primary-700 leading-relaxed">
-              Motivated Master of Computer Science student with strong foundations in software engineering, 
-              web development, and cloud technologies. Transitioning from design and customer-facing roles 
-              into IT, bringing excellent problem-solving skills, attention to detail, and adaptability.
+              Junior Software Engineer with hands-on experience building full-stack, backend, and AI-assisted systems. 
+              Known for rapidly learning complex architectures, designing clean and maintainable solutions, and translating 
+              requirements into reliable software. Brings strong system thinking, ownership, and communication skills 
+              from a non-traditional design background.
             </p>
 
             <p className="text-primary-700 leading-relaxed">
-              Experienced with building full-stack and machine-learning projects, and eager to contribute 
-              as an IT or Software Engineering Intern. Currently maintaining a high distinction result 
-              throughout my Master of Computer Science program.
+              Currently in final year of Master of Computer Science at University of Wollongong with consistent 
+              high-distinction results (90/100 WAM). Proven track record of contributing to industry-style projects, 
+              implementing complex systems, and delivering under tight deadlines.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="text-center p-4 bg-accent-50 rounded-lg">
-                <div className="text-2xl font-bold text-accent-600 mb-2">2026</div>
+                <div className="text-2xl font-bold text-accent-600 mb-2">07/2026</div>
                 <div className="text-sm text-primary-600">Expected Graduation</div>
               </div>
               <div className="text-center p-4 bg-primary-50 rounded-lg">
-                <div className="text-2xl font-bold text-accent-600 mb-2">HD</div>
-                <div className="text-sm text-primary-600">Current Result</div>
+                <div className="text-2xl font-bold text-accent-600 mb-2">90/100</div>
+                <div className="text-sm text-primary-600">Current WAM</div>
               </div>
             </div>
           </div>

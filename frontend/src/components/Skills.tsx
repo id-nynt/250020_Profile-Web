@@ -1,26 +1,27 @@
 const Skills = () => {
   const programmingFrameworks = {
-    languages: ['Python', 'JavaScript', 'C#'],
-    frameworks: ['React'],
-    databases: ['MySQL'],
-    cloudDevOps: ['AWS', 'Docker']
+    languages: ['Python', 'JavaScript', 'C#', 'SQL'],
+    frameworks: ['React', 'ASP.NET Core', 'Next.js'],
+    databases: ['SQL', 'MySQL'],
+    cloudDevOps: ['AWS', 'Docker', 'Git']
   }
 
   const toolsTechnologies = [
-    'Git & GitHub',
-    'VS Code',
-    'Jupyter',
-    'AWS (EC2, S3, IAM)',
-    'CI/CD basics'
+    'REST APIs & Microservices',
+    'Pandas, NumPy, scikit-learn',
+    'RAG & ML Pipelines',
+    'Tailwind CSS, HTML/CSS',
+    'CI/CD Pipelines',
+    'Docker & Cloud Deployment'
   ]
 
   const softSkills = [
-    'Communication Skills',
-    'Organisational Skills', 
-    'Teamwork & Leadership',
-    'Problem-solving',
-    'Time Management',
-    'Adaptability'
+    'Agile/Scrum',
+    'System Design & Architecture',
+    'Clean Code Practices',
+    'Problem-solving & Ownership',
+    'Team Leadership & Communication',
+    'Requirement Analysis'
   ]
 
   return (

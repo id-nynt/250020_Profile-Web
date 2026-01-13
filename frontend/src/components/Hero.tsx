@@ -41,10 +41,12 @@ const Hero = () => {
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-200 mb-6 font-medium">
-              IT Intern
+              Junior Software Engineer | Full-Stack & AI-Assisted Systems |
             </h2>
             <p className="text-lg text-white mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Master of Computer Science student passionate about building innovative solutions with modern technologies. Specializing in full-stack development, cloud computing, and machine learning.
+              I’m a software engineer with experience in backend development, cloud deployment, and AI-augmented solutions. I enjoy turning real problems into clean, scalable software with thoughtful design and solid engineering principles.
+              <br />
+              I bring a unique blend of system thinking and creativity, backed by hands-on project work and strong foundational coursework. I’m currently seeking software engineering roles where I can contribute meaningfully and grow technically.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -3,82 +3,103 @@ import { Project } from '../types/project'
 // Phase 1: Mock data that mirrors the exact structure needed for Phase 2+
 export const mockProjects: Project[] = [
   {
+    id: 'nhan-van-ielts',
+    title: 'Nhan Van IELTS Practice Platform',
+    shortDescription: 'Building an IELTS practice platform with interactive learning features.',
+    fullDescription: 'Currently developing a comprehensive IELTS practice platform to help students prepare for the IELTS examination. The platform includes practice tests, vocabulary building, and progress tracking features.',
+    problem: 'IELTS candidates need accessible, interactive practice tools with instant feedback and progress tracking to prepare effectively for the examination.',
+    approach: 'Built a responsive platform using React and Next.js with Tailwind CSS. Implemented interactive practice test components, real-time progress tracking, and user authentication.',
+    outcome: 'Created an intuitive learning platform enabling students to practice and track their IELTS preparation progress with clean, maintainable code.',
+    category: 'commercial',
+    projectCategory: 'software',
+    technologies: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Backend APIs'],
+    projectUrl: 'https://www.nhanvaneducation.com/',
+    team: 'Software development team',
+    role: 'Full-stack Developer',
+    responsibilities: [
+      'Successfully implemented frontend using React and Tailwind CSS',
+      'Built interactive practice test components with real-time feedback',
+      'Implemented progress tracking and user feedback systems',
+      'Created responsive design for all device sizes'
+    ],
+    period: '10/2025 - Current',
+    imageUrl: '/images/projects/ielts-platform.png',
+    featured: false,
+    status: 'in-progress'
+  },
+  {
     id: 'portfolio-website',
     title: 'Personal Portfolio Website',
-    shortDescription: 'Built a fully responsive portfolio to showcase skills, resume, and projects.',
-    fullDescription: 'Created a modern, responsive portfolio website using React and Next.js with a focus on performance, SEO, and user experience. Features dynamic project filtering, contact forms, and optimized image delivery.',
-    category: 'professional',
+    shortDescription: 'Designed and developed a responsive portfolio website to showcase skills, resume, and projects.',
+    fullDescription: 'Created a modern, responsive portfolio website using React and Next.js with a focus on performance, SEO, and user experience. Features dynamic project filtering, clean component structure, and optimized styling with Tailwind CSS.',
+    problem: 'Needed a professional online presence to showcase my technical skills, projects, and resume to potential employers and collaborators.',
+    approach: 'Built a responsive portfolio using React and Next.js with Tailwind CSS. Implemented modular component structure, integrated project data management, and optimized for performance and SEO.',
+    outcome: 'Successfully delivered a polished, professional portfolio that effectively showcases technical skills and project accomplishments. Mobile-friendly design ensures accessibility.',
+    category: 'personal',
     projectCategory: 'software',
-    technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'AWS'],
+    technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript'],
     githubUrl: 'https://github.com/id-nynt/250020_Profile-Web',
-    projectUrl: 'https://250020-profile-web.vercel.app/',
+    projectUrl: 'https://janny-portfolio.vercel.app/',
     team: 'Individual project',
     role: 'Full-stack Developer',
     responsibilities: [
-      'Developed reusable UI components with modern design practices',
-      'Integrated project highlights and downloadable resume',
-      'Implemented responsive design for all devices',
-      'Deployed on AWS for high availability'
-    ],
-    outcomes: [
-      'Mobile-friendly personal site accessible across devices',
-      'Professional online presence for job applications',
-      'Showcased technical skills and project portfolio'
+      'Successfully implemented responsive frontend using React and Tailwind CSS',
+      'Integrated frontend with backend APIs with clean data flow',
+      'Applied reusable UI patterns and maintainable styling practices',
+      'Optimized for performance and SEO',
+      'Focused on user experience and accessibility'
     ],
     period: '11/2025 - 12/2025',
     imageUrl: '/images/projects/portfolio-website.png',
     featured: true,
     status: 'completed'
   },
-    {
+  {
     id: 'shakespeare-chatbot',
-    title: '(Uni) Shakespeare Literature Chatbot',
-    shortDescription: 'Built a domain specific intelligent chatbot to answer questions about Shakespeare\'s plays.',
-    fullDescription: 'Developed an advanced chatbot using small language models and RAG (Retrieval-Augmented Generation) to provide accurate, contextual answers about Shakespeare\'s literary works. The system combines fine-tuning techniques with efficient retrieval systems.',
+    title: '(University) Shakespeare Literature Chatbot',
+    shortDescription: 'Built a domain-specific intelligent chatbot to answer questions about Shakespeare\'s plays using RAG.',
+    fullDescription: 'Independently designed and built an end-to-end AI system, structuring raw text data into retrievable formats and integrating RAG to improve answer accuracy and relevance. Demonstrated strong self-learning by iteratively refining prompts, data chunking, and system architecture.',
+    problem: 'Chatbots often hallucinate answers when lacking grounding in source material. Needed an accurate, fact-based system specifically for Shakespeare literature that could retrieve relevant play excerpts to support responses.',
+    approach: 'Python, RAG (Retrieval-Augmented Generation), FAISS for vector search, and small language models (TinyLlama). Structured Shakespeare texts into searchable vector embeddings, implemented a retrieval layer to fetch relevant passages, and used LLMs to generate contextual answers.',
+    outcome: 'Successfully built a reliable Shakespeare chatbot that grounds answers in actual play text. Significantly reduced hallucinations through RAG implementation. Achieved production-ready architecture with iterative refinement.',
     category: 'academic',
     projectCategory: 'data-ml',
-    technologies: ['Python', 'DistilGPT-2', 'GPT-Neo', 'TinyLlama', 'LoRA', 'RAG', 'Streamlit'],
+    technologies: ['Python', 'RAG', 'FAISS', 'TinyLlama', 'Streamlit'],
     githubUrl: 'https://github.com/id-nynt/250021_shakespeare-chatbot',
-    // projectUrl: 'https://250021shakespeare-chatbot.streamlit.app/',
-    team: '3-person team',
-    role: 'Team Coordinator & Technical Lead',
+    demoUrl: 'https://shakespeare-chatbot.streamlit.app/',
+    team: 'Individual project',
+    role: 'Lead Developer & Architect',
     responsibilities: [
-      'Coordinated team workflow and technical decisions',
-      'Automated text cleaning, scene summarisation, and metadata extraction',
-      'Fine-tuned multiple language models using LoRA',
-      'Implemented RAG system for fast, accurate retrieval'
+      'Successfully implemented end-to-end AI system with RAG architecture',
+      'Structured raw text data into searchable vector embeddings',
+      'Built retrieval layer fetching relevant play passages for accuracy',
+      'Iteratively refined prompts and data chunking for optimal performance'
     ],
-    outcomes: [
-      'Delivered functional Shakespearean chatbot',
-      'Successfully fine-tuned TinyLlama + RAG pipeline',
-      'Achieved accurate factual query responses'
-    ],
-    period: '03/2025 - 06/2025',
+    period: '04/2025 - 06/2025',
     imageUrl: '/images/projects/shakespeare-chatbot.png',
     featured: true,
     status: 'completed'
   },
   {
     id: 'egovernment-microservice',
-    title: '(Uni) E-government Microservice Platform',
+    title: '(University) E-government Microservice Platform',
     shortDescription: 'Developed a microservice-based government service portal in a 6-member team.',
     fullDescription: 'Architected and implemented a scalable e-government platform using microservices architecture. The system handles multiple government services through independent, containerized services with API gateway integration.',
+    problem: 'Government services need scalability and independence—monolithic systems become bottlenecks. Required a platform where multiple government services could be deployed, scaled, and maintained independently.',
+    approach: 'Microservices architecture using C# and ASP.NET Core. Each service runs in Docker containers, coordinated through an API Gateway. Services communicate via REST APIs, enabling independent scaling and deployment.',
+    outcome: 'Successfully delivered a scalable microservice platform at scale. Each service can be updated independently without affecting others. Docker containerization ensures consistent environments across environments.',
     category: 'academic',
     projectCategory: 'software',
-    technologies: ['C#', 'ASP.NET', 'Docker', 'API Gateway', 'Microservices'],
+    technologies: ['C#', 'ASP.NET Core', 'Docker', 'Microservices', 'API Gateway'],
     githubUrl: 'https://github.com/id-nynt/250019_Microservice-E-gov-Platform',
+    demoUrl: 'https://github.com/id-nynt/250019_Microservice-E-gov-Platform#demo',
     team: '6-member team',
     role: 'Project Coordinator',
     responsibilities: [
-      'Coordinated project planning and requirement analysis',
-      'Built two independent microservices',
-      'Integrated four services via ASP.NET API Gateway',
-      'Containerized services with Docker'
-    ],
-    outcomes: [
-      'Platform successfully executed in local environments',
-      'Demonstrated microservice architecture principles',
-      'Effective team coordination and delivery'
+      'Successfully coordinated project planning and requirement analysis across 6 members',
+      'Implemented two independent microservices using ASP.NET Core',
+      'Integrated four services via ASP.NET API Gateway for seamless communication',
+      'Containerized and deployed all services using Docker for consistency'
     ],
     period: '09/2025 - 11/2025',
     imageUrl: '/images/projects/egovernment-platform.png',
@@ -87,25 +108,23 @@ export const mockProjects: Project[] = [
   },
   {
     id: 'big-data-analytics',
-    title: '(Uni) Big Data Analytics for ImageNet Classification',
+    title: '(University) Big Data Analytics for ImageNet Classification',
     shortDescription: 'Conducted large-scale analytics using ImageNet features generated by EVA-02.',
     fullDescription: 'Performed comprehensive big data analysis on ImageNet classification tasks using advanced machine learning techniques. Implemented efficient data pipelines and achieved significant performance improvements through hyperparameter optimization.',
+    problem: 'ImageNet classification accuracy gaps between models indicate room for improvement. Needed to analyze high-dimensional feature data and optimize classifiers to reduce the accuracy gap.',
+    approach: 'Python pipeline with XGBoost, scikit-learn for feature analysis and model building. Performed exploratory data analysis, implemented baseline classifiers, and systematically tuned hyperparameters to maximize accuracy.',
+    outcome: 'Successfully achieved 86.86% and 76.47% accuracy on separate test sets, reducing performance gap from 10.39% to 7.56%. Received commendation for "high technical maturity" demonstrating strong data science fundamentals.',
     category: 'academic',
     projectCategory: 'data-ml',
-    technologies: ['Python', 'XgBoost', 'ImageNet', 'EVA-02', 'Data Analytics', 'Machine Learning'],
+    technologies: ['Python', 'XGBoost', 'scikit-learn', 'ImageNet', 'Data Analytics'],
     githubUrl: 'https://github.com/id-nynt/250022_imagenet_analysis',
-    team: 'Academic project',
+    team: 'Individual project',
     role: 'Data Scientist',
     responsibilities: [
-      'Analysed requirements and designed end-to-end pipeline',
-      'Performed data preprocessing and EDA',
-      'Implemented baseline ImageNet classifier using XgBoost',
-      'Hyperparameter tuning and model optimization'
-    ],
-    outcomes: [
-      'Achieved 86.86% and 76.47% accuracy',
-      'Reduced performance gap from 10.39% to 7.56%',
-      'Received commendation for "high technical maturity"'
+      'Successfully designed end-to-end ML pipeline and analyzed requirements',
+      'Performed comprehensive data preprocessing and exploratory data analysis',
+      'Implemented baseline ImageNet classifier achieving competitive accuracy',
+      'Systematically tuned hyperparameters reducing performance gap by 2.83%'
     ],
     period: '10/2025 - 11/2025',
     imageUrl: '/images/projects/big-data-analytics.png',
@@ -117,22 +136,20 @@ export const mockProjects: Project[] = [
     title: 'AWS Serverless Data Lake Workshop',
     shortDescription: 'Hands-on serverless data lake development using AWS cloud-native tools.',
     fullDescription: 'Built a comprehensive serverless data lake architecture using AWS services. Implemented automated data ingestion, transformation, and querying capabilities with cloud-native tools and infrastructure as code.',
-    category: 'professional',
+    problem: 'Organizations need scalable data pipelines without managing servers. Built a serverless architecture to ingest, transform, and query large datasets efficiently.',
+    approach: 'AWS CloudFormation for infrastructure, AWS Glue for ETL, S3 for storage, Athena for querying. Implemented infrastructure as code ensuring reproducibility and scalability.',
+    outcome: 'Successfully built a fully serverless GDELT ingestion and query pipeline. Demonstrated understanding of serverless architecture patterns and AWS best practices.',
+    category: 'personal',
     projectCategory: 'cloud-networking',
     technologies: ['AWS', 'CloudFormation', 'IAM', 'AWS Glue', 'S3', 'Athena'],
     githubUrl: 'https://github.com/id-nynt/250016_aws-serverless-lake-day',
     team: 'Individual workshop',
     role: 'Cloud Developer',
     responsibilities: [
-      'Used CloudFormation and IAM roles for infrastructure provisioning',
-      'Performed ETL and metadata cataloguing with AWS Glue',
-      'Queried global datasets using Athena',
-      'Built serverless data pipeline'
-    ],
-    outcomes: [
-      'Built fully serverless GDELT ingestion + transform + query pipeline',
-      'Gained hands-on AWS cloud experience',
-      'Understanding of serverless architecture patterns'
+      'Successfully provisioned cloud infrastructure using CloudFormation and IAM roles',
+      'Implemented ETL pipeline and metadata cataloguing with AWS Glue',
+      'Built serverless queries on global datasets using Athena',
+      'Designed and deployed fully serverless data pipeline'
     ],
     period: '09/2025 - 10/2025',
     imageUrl: '/images/projects/aws-data-lake.png',
@@ -144,7 +161,10 @@ export const mockProjects: Project[] = [
     title: 'AWS 101 Workshop',
     shortDescription: 'Hands-on introduction to AWS cloud services and infrastructure.',
     fullDescription: 'Comprehensive introduction to Amazon Web Services covering fundamental concepts, core services, and hands-on practice with cloud infrastructure deployment and management.',
-    category: 'professional',
+    problem: 'Need foundational knowledge of AWS cloud services to build scalable, cloud-native applications.',
+    approach: 'Participated in structured workshop covering AWS fundamentals, core services (EC2, S3, Lambda), and hands-on labs for practical experience.',
+    outcome: 'Successfully gained foundational knowledge of AWS services and cloud infrastructure fundamentals.',
+    category: 'personal',
     projectCategory: 'cloud-networking',
     technologies: ['AWS', 'Cloud Computing', 'Infrastructure'],
     githubUrl: 'https://github.com/id-nynt/250015_aws-101-workshop',
@@ -156,11 +176,6 @@ export const mockProjects: Project[] = [
       'Understanding cloud architecture principles',
       'Completed practical exercises and labs'
     ],
-    outcomes: [
-      'Gained foundational knowledge of AWS cloud services',
-      'Practical experience with cloud infrastructure',
-      'Preparation for advanced AWS workshops'
-    ],
     period: '08/2025 - 09/2025',
     imageUrl: '/images/projects/aws-101.png',
     featured: false,
@@ -168,9 +183,12 @@ export const mockProjects: Project[] = [
   },
   {
     id: 'healthcare-network-design',
-    title: '(Uni) Healthcare Network Design',
+    title: '(University) Healthcare Network Design',
     shortDescription: 'Designed a realistic network architecture for a healthcare facility.',
     fullDescription: 'Comprehensive network design project for a healthcare facility, including security considerations, compliance requirements, and scalable infrastructure planning for medical data management.',
+    problem: 'Healthcare facilities need secure, scalable network infrastructure that complies with HIPAA requirements while supporting multiple departments and high data availability.',
+    approach: 'Designed comprehensive network architecture including security considerations, compliance requirements, and scalable infrastructure planning for medical data management. Developed detailed documentation and technical specifications.',
+    outcome: 'Successfully delivered network design achieving 98/100 score. Demonstrated strong technical communication and network architecture expertise.',
     category: 'academic',
     projectCategory: 'cloud-networking',
     technologies: ['Network Design', 'Infrastructure Planning', 'Documentation'],
@@ -178,15 +196,10 @@ export const mockProjects: Project[] = [
     team: 'Academic team project',
     role: 'Project Lead',
     responsibilities: [
-      'Led project planning and coordination',
-      'Analysed infrastructure requirements',
-      'Explained networking challenges to team members',
-      'Structured and delivered technical presentation'
-    ],
-    outcomes: [
-      'Scored 98/100 for outstanding design and communication',
-      'Demonstrated network architecture expertise',
-      'Effective technical communication skills'
+      'Successfully led project planning and team coordination',
+      'Analyzed infrastructure requirements and compliance needs',
+      'Communicated complex networking challenges to team members',
+      'Structured and delivered outstanding technical presentation'
     ],
     period: '08/2024 - 10/2024',
     imageUrl: '/images/projects/healthcare-network.png',
@@ -195,9 +208,12 @@ export const mockProjects: Project[] = [
   },
   {
     id: 'software-testing-analysis',
-    title: '(Uni) Software Testing and Analysis',
+    title: '(University) Software Testing and Analysis',
     shortDescription: 'Explored QA processes, test design, and software analysis techniques.',
     fullDescription: 'Comprehensive study and implementation of software testing methodologies, including functional testing, structural analysis, and quality assurance processes using industry-standard tools and frameworks.',
+    problem: 'Software quality assurance requires comprehensive testing strategies combining functional, structural, and analytical approaches to ensure reliability and correctness.',
+    approach: 'Implemented comprehensive testing methodologies including functional testing, structural analysis, and quality assurance processes. Used industry-standard tools and frameworks to design and execute test plans.',
+    outcome: 'Successfully achieved 37.45/40 score with well-structured report. Demonstrated comprehensive understanding of testing methodologies and effective presentation delivery.',
     category: 'academic',
     projectCategory: 'software',
     technologies: ['Software Testing', 'QA Processes', 'Test Design', 'Documentation'],
@@ -205,15 +221,10 @@ export const mockProjects: Project[] = [
     team: 'Academic team project',
     role: 'Team Coordinator',
     responsibilities: [
-      'Coordinated team meetings and progress tracking',
-      'Managed communication with tutors',
-      'Structured test planning and documentation',
-      'Applied functional, structural, and analytic testing concepts'
-    ],
-    outcomes: [
-      'Achieved 37.45/40 for well-structured report',
-      'Effective presentation delivery',
-      'Comprehensive understanding of testing methodologies'
+      'Successfully coordinated team meetings and progress tracking',
+      'Managed communication with tutors and stakeholders',
+      'Structured comprehensive test planning and documentation',
+      'Applied functional, structural, and analytic testing concepts effectively'
     ],
     period: '04/2025 - 05/2025',
     imageUrl: '/images/projects/software-testing.png',
@@ -229,7 +240,7 @@ export const getMockProjectById = (id: string) => {
   return mockProjects.find(project => project.id === id)
 }
 
-export const getMockProjectsByCategory = (category: 'academic' | 'professional' | 'all') => {
+export const getMockProjectsByCategory = (category: 'academic' | 'personal' | 'commercial' | 'all') => {
   if (category === 'all') return mockProjects
   return mockProjects.filter(project => project.category === category)
 }
