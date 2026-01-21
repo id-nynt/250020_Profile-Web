@@ -92,7 +92,7 @@ export const mockProjects: Project[] = [
     projectCategory: 'software',
     technologies: ['C#', 'ASP.NET Core', 'Docker', 'Microservices', 'API Gateway'],
     githubUrl: 'https://github.com/id-nynt/250019_Microservice-E-gov-Platform',
-    demoUrl: '/video/projects/egovernment-microservice-demo.mp4',
+    demoUrl: '/video/projects/egovernment-platform-demo.mp4',
     team: '6-member team',
     role: 'Project Coordinator',
     responsibilities: [
