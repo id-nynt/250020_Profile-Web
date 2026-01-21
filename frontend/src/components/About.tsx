@@ -12,11 +12,11 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-primary-800 mb-4">
-              Junior Software Engineer with System Thinking
+              Software Engineer with System Thinking
             </h3>
             
             <p className="text-primary-700 leading-relaxed">
-              Junior Software Engineer with hands-on experience building full-stack, backend, and AI-assisted systems. 
+              Software Engineer with hands-on experience building full-stack, backend, and AI-assisted systems. 
               Known for rapidly learning complex architectures, designing clean and maintainable solutions, and translating 
               requirements into reliable software. Brings strong system thinking, ownership, and communication skills 
               from a non-traditional design background.
