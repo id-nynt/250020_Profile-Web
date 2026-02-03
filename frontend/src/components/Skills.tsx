@@ -1,27 +1,69 @@
 const Skills = () => {
-  const programmingFrameworks = {
-    languages: ['Python', 'JavaScript', 'C#', 'SQL'],
-    frameworks: ['React', 'ASP.NET Core', 'Next.js'],
-    databases: ['SQL', 'MySQL'],
-    cloudDevOps: ['AWS', 'Docker', 'Git']
-  }
-
-  const toolsTechnologies = [
-    'REST APIs & Microservices',
-    'Pandas, NumPy, scikit-learn',
-    'RAG & ML Pipelines',
-    'Tailwind CSS, HTML/CSS',
-    'CI/CD Pipelines',
-    'Docker & Cloud Deployment'
+  // Technical Skills organized by category with icons
+  const technicalSkills = [
+    {
+      category: 'Programming & Core',
+      icon: '💻',
+      skills: ['Python', 'C#', 'JavaScript']
+    },
+    {
+      category: 'Backend & APIs',
+      icon: '🔧',
+      skills: ['.NET', 'REST APIs', 'Microservices']
+    },
+    {
+      category: 'Frontend',
+      icon: '🎨',
+      skills: ['React', 'Tailwind CSS', 'HTML', 'CSS']
+    },
+    {
+      category: 'Data & AI',
+      icon: '🤖',
+      skills: ['Pandas', 'NumPy', 'scikit-learn', 'ML Pipelines', 'RAG Concepts']
+    },
+    {
+      category: 'Database',
+      icon: '🗄️',
+      skills: ['SQL', 'MySQL']
+    },
+    {
+      category: 'Infrastructure & Tools',
+      icon: '☁️',
+      skills: ['Git', 'Docker', 'AWS']
+    },
+    {
+      category: 'Practices & Design',
+      icon: '✨',
+      skills: ['Agile/Scrum', 'Testing Fundamentals', 'Figma', 'Photoshop', 'Canva']
+    }
   ]
 
   const softSkills = [
-    'Agile/Scrum',
-    'System Design & Architecture',
-    'Clean Code Practices',
-    'Problem-solving & Ownership',
-    'Team Leadership & Communication',
-    'Requirement Analysis'
+    {
+      icon: '💬',
+      title: 'Technical Communication & Stakeholder Management',
+      description: 'Clear articulation of complex technical concepts to diverse audiences'
+    },
+    {
+      icon: '📋',
+      title: 'Clean Code Practices & Code Review',
+      description: 'Commitment to maintainability, readability, and quality standards'
+    },
+    {
+      icon: '🎯',
+      title: 'Problem-solving & Ownership',
+      description: 'Proactive identification of solutions with accountability and follow-through'
+    },
+    {
+      icon: '📚',
+      title: 'Self-Directed Learning & Continuous Improvement',
+      description: 'Continuous skill development and adaptation to new technologies'
+    },
+    {
+      icon: '👥',
+      title: 'Project Leadership & Team Coordination',
+      description: 'Effective team guidance and successful project delivery at scale'
+    }
   ]
 
   return (
@@ -33,86 +75,59 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-accent-600 mx-auto mb-6"></div>
           <p className="text-lg text-primary-600 max-w-3xl mx-auto">
-            A comprehensive overview of my technical competencies and the tools I use to build modern applications.
+            A comprehensive overview of my technical competencies and soft skills that drive successful project delivery.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Programming & Frameworks */}
-          <div className="bg-white rounded-lg p-8 shadow-sm border border-primary-200">
-            <h3 className="text-xl font-semibold text-primary-800 mb-6 text-center">
-              Programming & Frameworks
-            </h3>
+        {/* Technical Skills Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold text-primary-800 mb-8 text-center">
+            Technical Skills
+          </h3>
+          <div className="bg-white rounded-lg py-8 px-20 shadow-sm border border-primary-200">
             <div className="space-y-6">
-              <div>
-                <h4 className="font-medium text-primary-700 mb-3">Languages:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {programmingFrameworks.languages.map((lang, index) => (
-                    <span key={index} className="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">{lang}</span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-medium text-primary-700 mb-3">Frameworks:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {programmingFrameworks.frameworks.map((framework, index) => (
-                    <span key={index} className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">{framework}</span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-medium text-primary-700 mb-3">Databases:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {programmingFrameworks.databases.map((db, index) => (
-                    <span key={index} className="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">{db}</span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-medium text-primary-700 mb-3">Cloud & DevOps:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {programmingFrameworks.cloudDevOps.map((tool, index) => (
-                    <span key={index} className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">{tool}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Tools & Technologies */}
-          <div className="bg-white rounded-lg p-8 shadow-sm border border-primary-200">
-            <h3 className="text-xl font-semibold text-primary-800 mb-6 text-center">
-              Tools & Technologies
-            </h3>
-            <div className="space-y-4">
-              {toolsTechnologies.map((tool, index) => (
-                <div
-                  key={index}
-                  className="flex items-center p-3 bg-primary-50 rounded-lg hover:bg-primary-100 transition-colors"
-                >
-                  <div className="w-3 h-3 bg-primary-600 rounded-full mr-3"></div>
-                  <span className="text-primary-700 font-medium">{tool}</span>
+              {technicalSkills.map((skillGroup, index) => (
+                <div key={index} className="grid grid-cols-[240px_1fr] gap-8 items-start pb-6 border-b border-primary-100 last:border-b-0 last:pb-0">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{skillGroup.icon}</span>
+                    <h4 className="font-semibold text-primary-800">{skillGroup.category}</h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {skillGroup.skills.map((skill, skillIndex) => (
+                      <span 
+                        key={skillIndex} 
+                        className="px-3 py-1 bg-gradient-to-r from-accent-100 to-primary-100 text-primary-700 rounded-full text-sm font-medium hover:from-accent-200 hover:to-primary-200 transition-all"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Soft Skills */}
-          <div className="bg-white rounded-lg p-8 shadow-sm border border-primary-200">
-            <h3 className="text-xl font-semibold text-primary-800 mb-6 text-center">
-              Soft Skills
-            </h3>
-            <div className="space-y-4">
-              {softSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center p-3 bg-accent-50 rounded-lg hover:bg-accent-100 transition-colors"
-                >
-                  <div className="w-3 h-3 bg-accent-600 rounded-full mr-3"></div>
-                  <span className="text-primary-700 font-medium">{skill}</span>
-                </div>
-              ))}
-            </div>
+        {/* Soft Skills Section */}
+        <div>
+          <h3 className="text-2xl font-semibold text-primary-800 mb-8 text-center">
+            Soft Skills
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {softSkills.map((skill, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-lg p-6 shadow-sm border border-accent-200 hover:shadow-md transition-shadow"
+              >
+                <div className="text-3xl mb-3">{skill.icon}</div>
+                <h4 className="font-semibold text-primary-800 mb-2 text-sm">
+                  {skill.title}
+                </h4>
+                <p className="text-primary-600 text-xs leading-relaxed">
+                  {skill.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -4,19 +4,19 @@ const Experience = () => {
       title: 'Pulse Volunteer',
       organization: 'University of Wollongong',
       period: '08/2024 – Current',
-      description: 'Supporting peers by organizing workshops and campus-wide activities, fostering collaboration and communication skills.'
-    },
-    {
-      title: 'CREG Volunteer',
-      organization: 'Corrimal Rotary Environment Group',
-      period: '08/2024 – 02/2025',
-      description: 'Collaborated on environmental cleanup initiatives, demonstrating teamwork and organizational skills.'
+      description: 'Supporting peers through workshop organization and campus-wide activities, fostering collaboration and building communication skills.'
     },
     {
       title: 'Course Team Leader',
       organization: 'TCS Sydney Marathon presented by ASICS',
       period: '09/2024',
-      description: 'Coordinated volunteer teams, showcasing leadership and planning capabilities.'
+      description: 'Led volunteer team coordination, demonstrating project leadership and organizational capabilities.'
+    },
+    {
+      title: 'CREG Volunteer',
+      organization: 'Corrimal Rotary Environment Group',
+      period: '08/2024 – 02/2025',
+      description: 'Collaborated on environmental initiatives, demonstrating teamwork and community commitment.'
     }
   ]
 
