@@ -40,31 +40,38 @@ const WorkExperience = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative" style={{
+      backgroundImage: 'url(/images/home/project-background-3.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Dark Blue Overlay */}
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(30, 39, 53, 0.85)' }}></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-orbitron">
             Work Experience
           </h2>
-          <div className="w-24 h-1 bg-accent-600 mx-auto mb-6"></div>
-          <p className="text-lg text-primary-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Professional experience that has shaped my technical skills and work ethic.
           </p>
         </div>
 
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-primary-50 rounded-lg p-6 border-l-4 border-accent-600">
-              <h4 className="text-xl font-semibold text-primary-800 mb-2">
+            <div key={index} className="rounded-lg p-6 border-l-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.35)', borderColor: '#ff903b' }}>
+              <h4 className="text-xl font-semibold text-white mb-2">
                 {exp.title}
               </h4>
-              <div className="text-accent-600 font-medium mb-1">{exp.company}</div>
-              <div className="text-primary-600 text-sm mb-2">{exp.period} | {exp.location}</div>
-              <p className="text-primary-700 mb-4">{exp.description}</p>
+              <div className="font-medium mb-1" style={{ color: '#ff903b' }}>{exp.company}</div>
+              <div className="text-gray-400 text-sm mb-2">{exp.period} | {exp.location}</div>
+              <p className="text-gray-200 mb-4">{exp.description}</p>
               <ul className="space-y-2">
                 {exp.responsibilities.map((resp, idx) => (
-                  <li key={idx} className="flex items-start text-primary-700 text-sm">
-                    <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <li key={idx} className="flex items-start text-gray-300 text-sm">
+                    <span className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#ff903b' }}></span>
                     <span>{resp}</span>
                   </li>
                 ))}

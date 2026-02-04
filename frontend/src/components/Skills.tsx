@@ -29,7 +29,7 @@ const Skills = () => {
     {
       category: 'Infrastructure & Tools',
       icon: '☁️',
-      skills: ['Git', 'Docker', 'AWS']
+      skills: ['Git', 'CI/CD', 'Docker', 'AWS']
     },
     {
       category: 'Practices & Design',
@@ -45,9 +45,9 @@ const Skills = () => {
       description: 'Clear articulation of complex technical concepts to diverse audiences'
     },
     {
-      icon: '📋',
-      title: 'Clean Code Practices & Code Review',
-      description: 'Commitment to maintainability, readability, and quality standards'
+      icon: '✅',
+      title: 'Attention to Detail & Quality Assurance',
+      description: 'Meticulous approach to identifying issues and ensuring high-quality deliverables'
     },
     {
       icon: '🎯',
@@ -63,75 +63,104 @@ const Skills = () => {
       icon: '👥',
       title: 'Project Leadership & Team Coordination',
       description: 'Effective team guidance and successful project delivery at scale'
+    },
+    {
+      icon: '⏱️',
+      title: 'Time Management & Organization',
+      description: 'Efficient planning and execution to meet deadlines and manage priorities'
     }
   ]
 
   return (
-    <section className="py-20 bg-primary-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">
-            Skills
-          </h2>
-          <div className="w-24 h-1 bg-accent-600 mx-auto mb-6"></div>
-          <p className="text-lg text-primary-600 max-w-3xl mx-auto">
-            A comprehensive overview of my technical competencies and soft skills that drive successful project delivery.
-          </p>
-        </div>
-
-        {/* Technical Skills Section */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-primary-800 mb-8 text-center">
-            Technical Skills
-          </h3>
-          <div className="bg-white rounded-lg py-8 px-20 shadow-sm border border-primary-200">
-            <div className="space-y-6">
-              {technicalSkills.map((skillGroup, index) => (
-                <div key={index} className="grid grid-cols-[240px_1fr] gap-8 items-start pb-6 border-b border-primary-100 last:border-b-0 last:pb-0">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">{skillGroup.icon}</span>
-                    <h4 className="font-semibold text-primary-800">{skillGroup.category}</h4>
+    <>
+      {/* Technical Skills Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Image Left - 1/3 */}
+            <div className="rounded-lg overflow-hidden shadow-sm h-full">
+              <img 
+                src="/images/home/technical-skills.jpg" 
+                alt="Technical Skills"
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            {/* Content Right - 2/3 */}
+            <div className="lg:col-span-2">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-orbitron">
+                Technical Skills
+              </h2>
+              <div className="w-24 h-1 mb-6" style={{ backgroundColor: '#ff903b' }}></div>
+              <p className="text-lg text-gray-700 mb-8">
+                A comprehensive overview of my technical competencies
+              </p>
+              
+              <div className="space-y-6">
+                {technicalSkills.map((skillGroup, index) => (
+                  <div key={index} className={`flex items-start gap-4 pb-6 ${index !== technicalSkills.length - 1 ? 'border-b border-gray-300' : ''}`}>
+                    <div 
+                      className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: '#000' }}
+                    >
+                      <span className="text-xl">{skillGroup.icon}</span>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-black mb-2">{skillGroup.category}</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {skillGroup.skills.map((skill, skillIndex) => (
+                          <span 
+                            key={skillIndex} 
+                            className="px-3 py-1 rounded-full text-sm font-medium"
+                            style={{ backgroundColor: '#f0f0f0', color: '#000' }}
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.skills.map((skill, skillIndex) => (
-                      <span 
-                        key={skillIndex} 
-                        className="px-3 py-1 bg-gradient-to-r from-accent-100 to-primary-100 text-primary-700 rounded-full text-sm font-medium hover:from-accent-200 hover:to-primary-200 transition-all"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Soft Skills Section */}
-        <div>
-          <h3 className="text-2xl font-semibold text-primary-800 mb-8 text-center">
-            Soft Skills
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      {/* Soft Skills Section */}
+      <section className="py-20" style={{ backgroundColor: '#f5f5f5' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-orbitron">
+              Soft Skills
+            </h2>
+            <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {softSkills.map((skill, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-lg p-6 shadow-sm border border-accent-200 hover:shadow-md transition-shadow"
+                className="rounded-lg p-6 text-center"
+                style={{ backgroundColor: 'transparent' }}
               >
-                <div className="text-3xl mb-3">{skill.icon}</div>
-                <h4 className="font-semibold text-primary-800 mb-2 text-sm">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                  style={{ backgroundColor: '#000' }}
+                >
+                  <span className="text-xl">{skill.icon}</span>
+                </div>
+                <h4 className="font-semibold text-black mb-2 leading-tight">
                   {skill.title}
                 </h4>
-                <p className="text-primary-600 text-xs leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {skill.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 

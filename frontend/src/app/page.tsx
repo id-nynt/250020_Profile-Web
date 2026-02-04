@@ -12,8 +12,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <About />
-      <Skills />
       <WorkExperience />
+      <Skills />
       <Education />
       <Competitions />
       <Experience />

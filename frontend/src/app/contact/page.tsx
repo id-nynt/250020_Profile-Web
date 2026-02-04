@@ -58,10 +58,14 @@ export default function ContactPage() {
             priority
           />
         </div>
+        
+        {/* Black Overlay */}
+        <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">
+          <h1 className="text-5xl md:text-5xl font-bold text-white mb-4 font-orbitron">
             Get In Touch
           </h1>
           <p className="text-lg text-white max-w-3xl mx-auto">

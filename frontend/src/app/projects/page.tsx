@@ -14,18 +14,18 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <>
-      <div className="bg-white rounded-lg shadow-sm border border-primary-200 hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col">
+      <div className="rounded-lg shadow-sm border border-gray-600 hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col" style={{ backgroundColor: 'rgba(50, 50, 50, 0.85)' }}>
         <div className="p-6 flex-1 flex flex-col">
           {/* Header: Title & Period */}
           <div className="mb-3">
-            <h3 className="text-xl font-semibold text-primary-800 mb-1">
+            <h3 className="text-xl font-semibold text-white mb-1">
               {project.title}
             </h3>
-            <p className="text-primary-600 text-sm">{project.period}</p>
+            <p className="text-gray-300 text-sm">{project.period}</p>
           </div>
 
           {/* Introduction */}
-          <p className="text-primary-700 leading-relaxed mb-4 flex-grow">
+          <p className="text-gray-200 leading-relaxed mb-4 flex-grow">
             {project.shortDescription}
           </p>
 
@@ -34,7 +34,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-accent-100 text-accent-700 text-sm rounded-full"
+                className="px-3 py-1 text-sm rounded-full" 
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', color: '#ff903b' }}
               >
                 {tech}
               </span>
@@ -44,7 +45,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           {/* Project Image */}
           {project.imageUrl && (
             <div className="mb-4 -mx-6 px-6">
-              <div className="w-full h-40 bg-primary-100 rounded-lg overflow-hidden relative border border-gray-300">
+              <div className="w-full h-40 rounded-lg overflow-hidden relative border border-gray-600" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
@@ -93,7 +94,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           {/* Project Details Button */}
           <button
             onClick={() => setShowModal(true)}
-            className="text-accent-600 hover:text-accent-700 font-medium transition-colors"
+            className="text-white hover:font-semibold hover:underline font-medium transition-colors"
           >
             Project Details
           </button>
@@ -102,14 +103,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
       {/* Project Details Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center p-4 pt-20">
-          <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[calc(100vh-100px)] flex flex-col">
+        <div className="fixed inset-0 bg-black bg-opacity-85 z-50 flex items-start justify-center p-4 pt-20">
+          <div className="rounded-lg shadow-2xl max-w-4xl w-full max-h-[calc(100vh-100px)] flex flex-col" style={{ backgroundColor: 'rgb(31, 31, 31)' }}>
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-6 border-b border-primary-200 flex-shrink-0 bg-white rounded-t-lg">
-              <h2 className="text-2xl font-bold text-primary-800">{project.title}</h2>
+            <div className="flex items-center justify-between p-6 border-b border-gray-600 flex-shrink-0 rounded-t-lg" style={{ backgroundColor: 'rgb(75, 75, 75)' }}>
+              <h2 className="text-2xl font-bold text-white">{project.title}</h2>
               <button
                 onClick={() => setShowModal(false)}
-                className="text-primary-600 hover:text-primary-800 text-2xl font-bold leading-none"
+                className="text-gray-300 hover:text-white text-2xl font-bold leading-none"
               >
                 ×
               </button>
@@ -121,8 +122,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <div className="space-y-4">
                 {/* Time & Introduction */}
                 <div>
-                  <p className="text-primary-600 text-sm font-medium mb-2">{project.period}</p>
-                  <p className="text-primary-700 leading-relaxed">{project.shortDescription}</p>
+                  <p className="text-gray-300 text-sm font-medium mb-2">{project.period}</p>
+                  <p className="text-gray-200 leading-relaxed">{project.shortDescription}</p>
                 </div>
 
                 {/* Tech Stack Tags */}
@@ -130,7 +131,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-accent-100 text-accent-700 text-sm rounded-full"
+                      className="px-3 py-1 text-sm rounded-full"
+                      style={{ backgroundColor: 'rgba(185, 185, 185, 0.2)', color: '#ff903b' }}
                     >
                       {tech}
                     </span>
@@ -139,7 +141,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
                 {/* Project Image */}
                 {project.imageUrl && (
-                  <div className="w-full h-60 bg-primary-100 rounded-lg overflow-hidden relative border border-gray-300">
+                  <div className="w-full h-60 rounded-lg overflow-hidden relative border border-gray-600" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
                     <Image
                       src={project.imageUrl}
                       alt={project.title}
@@ -151,53 +153,53 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
 
               {/* Project Details */}
-              <div className="bg-primary-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-primary-800 mb-3">Project Details</h3>
+              <div className="p-4 rounded-lg border border-gray-600" style={{ backgroundColor: 'rgba(255, 144, 59, 0.1)' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#ff903b' }}>Project Details</h3>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="font-medium text-primary-700">Type:</span>
-                    <span className="text-primary-600 ml-2">{project.team}</span>
+                    <span className="font-medium text-gray-300">Type:</span>
+                    <span className="text-gray-200 ml-2">{project.team}</span>
                   </div>
                   <div>
-                    <span className="font-medium text-primary-700">Role:</span>
-                    <span className="text-primary-600 ml-2">{project.role}</span>
+                    <span className="font-medium text-gray-300">Role:</span>
+                    <span className="text-gray-200 ml-2">{project.role}</span>
                   </div>
                 </div>
               </div>
 
               {/* Problem */}
               {project.problem && (
-                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-                  <h3 className="font-semibold text-primary-800 mb-2 flex items-center">
-                    <span className="text-red-600 mr-2">🎯</span>
+                <div className="border-l-4 border-red-500 p-4 rounded" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)' }}>
+                  <h3 className="font-semibold text-white mb-2 flex items-center">
+                    <span className="text-red-500 mr-2">🎯</span>
                     Problem
                   </h3>
-                  <p className="text-primary-700 text-sm">{project.problem}</p>
+                  <p className="text-gray-200 text-sm">{project.problem}</p>
                 </div>
               )}
 
               {/* Approach */}
               {project.approach && (
-                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
-                  <h3 className="font-semibold text-primary-800 mb-2 flex items-center">
-                    <span className="text-purple-600 mr-2">🛠️</span>
+                <div className="border-l-4 border-purple-500 p-4 rounded" style={{ backgroundColor: 'rgba(147, 51, 234, 0.1)' }}>
+                  <h3 className="font-semibold text-white mb-2 flex items-center">
+                    <span className="text-purple-400 mr-2">🛠️</span>
                     Approach
                   </h3>
-                  <p className="text-primary-700 text-sm">{project.approach}</p>
+                  <p className="text-gray-200 text-sm">{project.approach}</p>
                 </div>
               )}
 
               {/* Key Responsibilities */}
               {project.responsibilities.length > 0 && (
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
-                  <h3 className="font-semibold text-primary-800 mb-3 flex items-center">
+                <div className="border-l-4 border-blue-400 p-4 rounded" style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)' }}>
+                  <h3 className="font-semibold text-white mb-3 flex items-center">
                     <span className="mr-2">📋</span>
                     Key Responsibilities
                   </h3>
-                  <ul className="text-sm text-primary-700 space-y-2">
+                  <ul className="text-sm text-gray-200 space-y-2">
                     {project.responsibilities.map((responsibility, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="w-2 h-2 bg-accent-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#ff903b' }}></span>
                         <span>{responsibility}</span>
                       </li>
                     ))}
@@ -207,21 +209,21 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
               {/* Outcome Summary */}
               {project.outcome && (
-                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-                  <h3 className="font-semibold text-primary-800 mb-2">Outcome</h3>
-                  <p className="text-primary-700 text-sm">{project.outcome}</p>
+                <div className="border-l-4 border-green-500 p-4 rounded" style={{ backgroundColor: 'rgba(34, 197, 94, 0.1)' }}>
+                  <h3 className="font-semibold text-white mb-2">Outcome</h3>
+                  <p className="text-gray-200 text-sm">{project.outcome}</p>
                 </div>
               )}
             </div>
 
             {/* Modal Footer */}
-            <div className="p-6 border-t border-primary-200 flex gap-3 justify-end bg-primary-50 rounded-b-lg flex-shrink-0 flex-wrap">
+            <div className="p-6 border-t border-gray-600 flex gap-3 justify-end rounded-b-lg flex-shrink-0 flex-wrap" style={{ backgroundColor: 'rgb(75, 75, 75)' }}>
               {project.demoUrl && (
                 <a
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
+                  className="inline-flex items-center px-4 py-2 bg-black hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
                 >
                   <ExternalLink size={16} className="mr-2" />
                   View Demo
@@ -232,7 +234,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   href={project.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg transition-colors font-medium text-sm"
+                  className="inline-flex items-center px-4 py-2 bg-black hover:bg-accent-700 text-white rounded-lg transition-colors font-medium text-sm"
                 >
                   <ExternalLink size={16} className="mr-2" />
                   View Live
@@ -298,10 +300,10 @@ export default function ProjectsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-primary-50 py-16 flex items-center justify-center">
+      <div className="min-h-screen py-16 flex items-center justify-center" style={{ backgroundColor: '#0E1830' }}>
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent-600 mx-auto mb-4"></div>
-          <p className="text-primary-600">Loading projects...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
+          <p className="text-gray-300">Loading projects...</p>
         </div>
       </div>
     )
@@ -321,10 +323,14 @@ export default function ProjectsPage() {
             priority
           />
         </div>
+        
+        {/* Black Overlay */}
+        <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 relative z-10">
           {/* 1. Introduction */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
+            <h1 className="text-5xl md:text-5xl font-bold text-white mb-4 font-orbitron">
               Welcome to My Project Showcase! 👋
             </h1>
             <p className="text-lg text-white max-w-3xl mx-auto mb-4">
@@ -343,7 +349,7 @@ export default function ProjectsPage() {
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             {/* Academic/Professional Filter */}
             <div className="flex justify-center">
-              <div className="inline-flex bg-white rounded-lg border border-primary-200 p-1">
+              <div className="inline-flex rounded-lg border border-gray-600 p-1" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
                 <button
                   onClick={() => {
                     setActiveCategory('all')
@@ -351,9 +357,10 @@ export default function ProjectsPage() {
                   }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'all'
-                      ? 'bg-accent-100 text-accent-700'
-                      : 'text-primary-600 hover:text-accent-600'
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
                   }`}
+                  style={activeCategory === 'all' ? { backgroundColor: 'rgba(255, 144, 59, 0.2)', color: '#ff903b' } : {}}
                 >
                   All Projects ({projects.length})
                 </button>
@@ -364,9 +371,10 @@ export default function ProjectsPage() {
                   }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'academic'
-                      ? 'bg-accent-100 text-accent-700'
-                      : 'text-primary-600 hover:text-accent-600'
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
                   }`}
+                  style={activeCategory === 'academic' ? { backgroundColor: 'rgba(255, 144, 59, 0.2)', color: '#ff903b' } : {}}
                 >
                   Academic ({academicProjects})
                 </button>
@@ -377,9 +385,10 @@ export default function ProjectsPage() {
                   }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'personal'
-                      ? 'bg-accent-100 text-accent-700'
-                      : 'text-primary-600 hover:text-accent-600'
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
                   }`}
+                  style={activeCategory === 'personal' ? { backgroundColor: 'rgba(255, 144, 59, 0.2)', color: '#ff903b' } : {}}
                 >
                   Personal ({personalProjects})
                 </button>
@@ -390,9 +399,10 @@ export default function ProjectsPage() {
                   }}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === 'commercial'
-                      ? 'bg-accent-100 text-accent-700'
-                      : 'text-primary-600 hover:text-accent-600'
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
                   }`}
+                  style={activeCategory === 'commercial' ? { backgroundColor: 'rgba(255, 144, 59, 0.2)', color: '#ff903b' } : {}}
                 >
                   Commercial ({commercialProjects})
                 </button>
@@ -405,14 +415,15 @@ export default function ProjectsPage() {
                 <select
                   value={activeProjectCategory}
                   onChange={(e) => setActiveProjectCategory(e.target.value as 'all' | 'software' | 'data-ml' | 'cloud-networking')}
-                  className="appearance-none bg-white border border-primary-200 rounded-lg px-4 py-3 pr-8 text-sm font-medium text-primary-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 w-full md:min-w-[200px] h-12"
+                  className="appearance-none border border-gray-600 rounded-lg px-4 py-3 pr-8 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 w-full md:min-w-[200px] h-12"
+                  style={{ backgroundColor: 'rgb(0, 0, 0)' }}
                 >
-                  <option value="all">All Categories</option>
-                  <option value="software">Software/Web ({projectsByCategory.software.length})</option>
-                  <option value="data-ml">Data & ML ({projectsByCategory['data-ml'].length})</option>
-                  <option value="cloud-networking">Cloud & Networking ({projectsByCategory['cloud-networking'].length})</option>
+                  <option value="all" style={{ backgroundColor: '#1e1e1e', color: '#fff' }}>All Categories</option>
+                  <option value="software" style={{ backgroundColor: '#1e1e1e', color: '#fff' }}>Software/Web ({projectsByCategory.software.length})</option>
+                  <option value="data-ml" style={{ backgroundColor: '#1e1e1e', color: '#fff' }}>Data & ML ({projectsByCategory['data-ml'].length})</option>
+                  <option value="cloud-networking" style={{ backgroundColor: '#1e1e1e', color: '#fff' }}>Cloud & Networking ({projectsByCategory['cloud-networking'].length})</option>
                 </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-primary-700">
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2" style={{ color: '#ff903b' }}>
                   <ChevronDown className="h-4 w-4" />
                 </div>
               </div>
@@ -428,28 +439,28 @@ export default function ProjectsPage() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-primary-600">No projects found with the selected filters.</p>
+              <p className="text-gray-300">No projects found with the selected filters.</p>
             </div>
           )}
         </div>
 
         {/* 3. All Projects */}
-        <div className="text-center mb-16 p-6 bg-gradient-to-r from-accent-50 to-primary-50 rounded-lg border border-accent-200">
-          <h3 className="text-xl font-semibold text-primary-800 mb-3">📁 All Projects</h3>
-          <p className="text-primary-700 mb-4">
+        <div className="text-center mb-16 p-6 rounded-lg border border-gray-600" style={{ backgroundColor: 'rgb(4, 23, 44)' }}>
+          <h3 className="text-xl font-semibold text-white mb-3" style={{ color: '#ffffff' }}>📁 All Projects</h3>
+          <p className="text-gray-200 mb-4">
             👉 And there are more! Visit{' '}
             <a
               href="https://github.com/id-nynt?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent-600 hover:text-accent-700 font-medium underline"
+              className="font-medium underline hover:text-white"
+              style={{ color: '#ff903b' }}
             >
               All GitHub Repos
             </a>
             {' '}to see my journey!
           </p>
         </div>
-linked
         </div>
       </div>
       

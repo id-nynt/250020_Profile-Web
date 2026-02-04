@@ -16,13 +16,16 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/home/hero-background.jpg"
+          src="/images/home/hero-background.png"
           alt="Background"
           fill
           className="object-cover"
           priority
         />
       </div>
+      
+      {/* Black Overlay */}
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}></div>
       
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -34,14 +37,14 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight font-orbitron whitespace-nowrap">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 Janny Tran
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-200 mb-6 font-medium">
-              Software Engineer | Full-Stack & AI-Assisted Systems |
+              Full-Stack Software Engineer | AI Enthusiast |
             </h2>
             <p className="text-lg text-white mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
               I’m a software engineer with experience in backend development, cloud deployment, and AI-augmented solutions. I enjoy turning real problems into clean, scalable software with thoughtful design and solid engineering principles.
@@ -53,14 +56,26 @@ const Hero = () => {
               <a
                 href="/documents/Janny_Tran_Resume.pdf"
                 download="Janny_Tran_Resume.pdf"
-                className="inline-flex items-center px-6 py-3 bg-accent-600 text-white rounded-lg hover:bg-accent-700 transition-colors font-medium"
+                className="inline-flex items-center px-6 py-3 text-white rounded-lg transition-colors font-medium"
+                style={{ backgroundColor: '#ff903b' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ff7e1f'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ff903b'}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resume
               </a>
               <button
                 onClick={scrollToAbout}
-                className="inline-flex items-center px-6 py-3 border-2 border-accent-600 text-accent-600 rounded-lg hover:bg-accent-600 hover:text-white transition-colors font-medium"
+                className="inline-flex items-center px-6 py-3 border-2 rounded-lg transition-colors font-medium"
+                style={{ borderColor: '#ff903b', color: '#ff903b', backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ff903b';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#ff903b';
+                }}
               >
                 Learn More
                 <ArrowDown className="w-5 h-5 ml-2" />

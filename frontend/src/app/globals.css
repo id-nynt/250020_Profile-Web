@@ -4,6 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* Custom Tailwind Theme Configuration */
+@layer base {
+  :root {
+    --color-dark-navy: #0E1830;
+    --color-highlight-blue: #232F5E;
+    --color-hover-dark: #2D3345;
+    --color-accent-yellow: #ff903b;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +28,38 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
+  background: linear-gradient(135deg, #64B5F6 0%, #42A5F5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Custom utility classes for header styling */
+.navbar-dark {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+}
+
+.nav-link {
+  @apply text-white font-bold transition-all duration-200;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-link:hover {
+  @apply font-extrabold;
+  background-color: #2D3345;
+}
+
+.nav-link-active {
+  @apply font-bold;
+  background-color: #ff903b;
+  color: #000000 !important;
+}
+
+.highlight-blue {
+  color: #232F5E;
 }
