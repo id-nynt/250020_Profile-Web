@@ -13,7 +13,7 @@ const Competitions = () => {
         </div>
 
         <div className="mx-auto">
-          <div className="bg-white rounded-xl px-20 py-8 border border-gray-300 shadow-lg">
+          <div className="bg-white rounded-xl px-8 lg:px-20 py-8 border border-gray-300 shadow-lg">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">

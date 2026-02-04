@@ -77,20 +77,20 @@ const Skills = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Image Left - 1/3 */}
-            <div className="rounded-lg overflow-hidden shadow-sm h-full">
+            {/* Image Left */}
+            <div className="rounded-lg overflow-hidden shadow-sm lg:h-full h-[250px]">
               <img 
                 src="/images/home/technical-skills.jpg" 
                 alt="Technical Skills"
                 className="w-full h-full object-cover" 
               />
             </div>
-            {/* Content Right - 2/3 */}
+            {/* Content Right */}
             <div className="lg:col-span-2">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-orbitron">
+              <h2 className="text-4xl md:text-5xl text-center lg:text-left font-bold text-black mb-4 font-orbitron">
                 Technical Skills
               </h2>
-              <div className="w-24 h-1 mb-6" style={{ backgroundColor: '#ff903b' }}></div>
+              <div className="w-24 h-1 mb-6 justify-center lg:justify-start mx-auto lg:mx-0" style={{ backgroundColor: '#ff903b' }}></div>
               <p className="text-lg text-gray-700 mb-8">
                 A comprehensive overview of my technical competencies
               </p>

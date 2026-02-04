@@ -25,7 +25,7 @@ export default function ContactPage() {
       icon: <MapPin className="w-5 h-5" />,
       iconImage: '/images/contact/location.svg',
       label: 'Location',
-      value: 'Gwynneville NSW 2500',
+      value: 'Wollongong NSW 2500',
       href: '#'
     },
     {
@@ -60,7 +60,7 @@ export default function ContactPage() {
         </div>
         
         {/* Black Overlay */}
-        <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 relative z-10">
         {/* Header */}
@@ -68,8 +68,9 @@ export default function ContactPage() {
           <h1 className="text-5xl md:text-5xl font-bold text-white mb-4 font-orbitron">
             Get In Touch
           </h1>
+          <div className="w-36 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
           <p className="text-lg text-white max-w-3xl mx-auto">
-            I'm currently seeking internship and entry-level opportunities in software development. 
+            I'm currently seeking entry-level opportunities in software development. 
             Let's connect and discuss how I can contribute to your team!
           </p>
         </div>
@@ -77,7 +78,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Left Side: What I'm Looking For and Quick Facts */}
           <div className="flex flex-col space-y-8 h-full">
-            <div className="bg-white p-6 rounded-lg border border-primary-200">
+            <div className="bg-gray-100 p-6 rounded-lg border-l-4" style={{ borderColor: '#ff903b' }}>
               <h3 className="text-lg font-semibold text-primary-800 mb-4">
                 What I'm Looking For
               </h3>
@@ -101,7 +102,7 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="bg-accent-50 p-6 rounded-lg border border-accent-200">
+            <div className="bg-gray-100 p-6 rounded-lg border-l-4" style={{ borderColor: '#ff903b' }}>
               <h3 className="text-lg font-semibold text-primary-800 mb-2">
                 Quick Facts
               </h3>
@@ -117,9 +118,9 @@ export default function ContactPage() {
           {/* Right Side: Contact Information */}
           <div className="flex flex-col h-full">
             <div className="flex-1">
-              <div className="space-y-4">
+              <div className="space-y-4 lg:flex lg:flex-col lg:justify-between lg:h-full">
                 {contactInfo.map((item, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-white rounded-lg border border-primary-200 hover:shadow-sm transition-shadow">
+                  <div key={index} className="flex items-center space-x-4 p-4 bg-white rounded-lg hover:shadow-sm transition-shadow border-l-4" style={{ borderColor: '#ff903b' }}>
                     <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center shadow-sm">
                       {item.iconImage ? (
                         <Image

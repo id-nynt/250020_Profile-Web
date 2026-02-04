@@ -14,7 +14,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <>
-      <div className="rounded-lg shadow-sm border border-gray-600 hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col" style={{ backgroundColor: 'rgba(50, 50, 50, 0.85)' }}>
+      <div className="rounded-lg shadow-sm border border-gray-500 hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col" style={{ backgroundColor: 'rgba(40, 40, 40, 0.9)' }}>
         <div className="p-6 flex-1 flex flex-col">
           {/* Header: Title & Period */}
           <div className="mb-3">
@@ -63,7 +63,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
+                className="inline-flex items-center px-4 py-2 bg-black hover:bg-gray-900 hover:font-bold text-white rounded-lg transition-colors font-medium text-sm"
               >
                 <ExternalLink size={16} className="mr-2" />
                 View Demo
@@ -74,21 +74,23 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg transition-colors font-medium text-sm"
+                className="inline-flex items-center px-4 py-2 bg-black hover:bg-gray-900 hover:font-bold text-white rounded-lg transition-colors font-medium text-sm"
               >
                 <ExternalLink size={16} className="mr-2" />
                 View Live
               </a>
             )}
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors font-medium text-sm"
-            >
-              <Github size={16} className="mr-2" />
-              View Code
-            </a>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-black hover:bg-gray-900 hover:font-bold text-white rounded-lg transition-colors font-medium text-sm"
+              >
+                <Github size={16} className="mr-2" />
+                View Code
+              </a>
+            )}
           </div>
 
           {/* Project Details Button */}
@@ -245,7 +247,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors font-medium text-sm"
+                  className="inline-flex items-center px-4 py-2 bg-black hover:bg-gray-900 hover:font-bold text-white rounded-lg transition-colors font-medium text-sm"
                 >
                   <Github size={16} className="mr-2" />
                   View Code
@@ -331,8 +333,9 @@ export default function ProjectsPage() {
           {/* 1. Introduction */}
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-5xl font-bold text-white mb-4 font-orbitron">
-              Welcome to My Project Showcase! 👋
+              Welcome to My Project Showcase!
             </h1>
+            <div className="w-64 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
             <p className="text-lg text-white max-w-3xl mx-auto mb-4">
               Welcome to my project showcase! Here's a collection of academic and professional projects 
               demonstrating my journey in software development, machine learning, cloud technologies, and system design.
@@ -360,7 +363,7 @@ export default function ProjectsPage() {
                       ? 'text-white'
                       : 'text-gray-300 hover:text-white'
                   }`}
-                  style={activeCategory === 'all' ? { backgroundColor: 'rgba(255, 144, 59, 0.2)', color: '#ff903b' } : {}}
+                  style={activeCategory === 'all' ? { backgroundColor: 'rgba(255, 151, 71, 0.3)', color: '#ff903b' } : {}}
                 >
                   All Projects ({projects.length})
                 </button>
@@ -446,7 +449,7 @@ export default function ProjectsPage() {
 
         {/* 3. All Projects */}
         <div className="text-center mb-16 p-6 rounded-lg border border-gray-600" style={{ backgroundColor: 'rgb(4, 23, 44)' }}>
-          <h3 className="text-xl font-semibold text-white mb-3" style={{ color: '#ffffff' }}>📁 All Projects</h3>
+          <h3 className="text-xl font-semibold text-white mb-3" style={{ color: '#ffffff' }}>All Projects</h3>
           <p className="text-gray-200 mb-4">
             👉 And there are more! Visit{' '}
             <a

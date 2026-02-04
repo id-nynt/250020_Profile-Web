@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="text-center p-8 bg-black text-white">
       <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Orbitron, sans-serif', fontWeight: 500 }}>
-        📫 Let's Connect
+        Let's Connect
       </h3>
       <div className="flex flex-wrap justify-center gap-6 text-lg mb-4">
         <a
@@ -38,7 +38,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-primary-300 text-sm">
-        © 2025 Janny Tran. All rights reserved.
+        © 2026 Janny Tran. All rights reserved.
       </div>
     </footer>
   )
