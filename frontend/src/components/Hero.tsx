@@ -1,7 +1,8 @@
 'use client'
 
-import { ArrowDown, Download } from 'lucide-react'
+import { ArrowDown, Download, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -38,13 +39,15 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight font-orbitron whitespace-nowrap">
-              Hi, I'm{' '}
+              Hi!
+              <br />
+              I'm{' '}
               <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 Janny Tran
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-200 mb-6 font-medium">
-              Full-Stack Software Engineer | AI Enthusiast |
+              Full-Stack Software Engineer | AI Enthusiast
             </h2>
             <p className="text-lg text-white mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
               I’m a software engineer with experience in backend development, cloud deployment, and AI-augmented solutions. I enjoy turning real problems into clean, scalable software with thoughtful design and solid engineering principles.
@@ -80,6 +83,22 @@ const Hero = () => {
                 Learn More
                 <ArrowDown className="w-5 h-5 ml-2" />
               </button>
+              <Link
+                href="/projects"
+                className="inline-flex items-center px-6 py-3 border-2 rounded-lg transition-colors font-medium"
+                style={{ borderColor: '#ff903b', color: '#ff903b', backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ff903b';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#ff903b';
+                }}
+              >
+                Projects
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
 

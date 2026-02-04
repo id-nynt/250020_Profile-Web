@@ -335,7 +335,7 @@ export default function ProjectsPage() {
             <h1 className="text-5xl md:text-5xl font-bold text-white mb-4 font-orbitron">
               Welcome to My Project Showcase!
             </h1>
-            <div className="w-64 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
+            <div className="w-24 lg:w-64 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
             <p className="text-lg text-white max-w-3xl mx-auto mb-4">
               Welcome to my project showcase! Here's a collection of academic and professional projects 
               demonstrating my journey in software development, machine learning, cloud technologies, and system design.
@@ -351,8 +351,8 @@ export default function ProjectsPage() {
           {/* Sorting System */}
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             {/* Academic/Professional Filter */}
-            <div className="flex justify-center">
-              <div className="inline-flex rounded-lg border border-gray-600 p-1" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+            <div className="flex justify-center w-full">
+              <div className="inline-flex flex-wrap rounded-lg border border-gray-600 p-1 gap-1 justify-center" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
                 <button
                   onClick={() => {
                     setActiveCategory('all')

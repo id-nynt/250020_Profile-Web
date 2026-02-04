@@ -68,7 +68,7 @@ export default function ContactPage() {
           <h1 className="text-5xl md:text-5xl font-bold text-white mb-4 font-orbitron">
             Get In Touch
           </h1>
-          <div className="w-36 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
+          <div className="w-24 lg:w-36 h-1 mx-auto mb-6" style={{ backgroundColor: '#ff903b' }}></div>
           <p className="text-lg text-white max-w-3xl mx-auto">
             I'm currently seeking entry-level opportunities in software development. 
             Let's connect and discuss how I can contribute to your team!
