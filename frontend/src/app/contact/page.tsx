@@ -85,11 +85,11 @@ export default function ContactPage() {
               <ul className="space-y-3 text-primary-700">
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-600 mt-0.5 flex-shrink-0" />
-                  <span>Software Development Internships</span>
+                  <span>Software Engineering Roles</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-600 mt-0.5 flex-shrink-0" />
-                  <span>Entry-level Full-stack Developer positions</span>
+                  <span>Full-stack Developer positions</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-accent-600 mt-0.5 flex-shrink-0" />

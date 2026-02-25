@@ -28,6 +28,33 @@ export const mockProjects: Project[] = [
     status: 'in-progress'
   },
   {
+    id: 'richard-le-storyblok',
+    title: 'Richard Le StoryBlok Migration',
+    shortDescription: 'Migrated static homepage to Storyblok CMS to improve content management flexibility and maintainability.',
+    fullDescription: 'Joined a professional development team to migrate Richard Le\'s portfolio website from a static HTML/CSS structure to a modern headless CMS architecture using Storyblok. After receiving project requirements from the product owner, thoroughly learned the existing codebase and legacy implementation, then led the frontend refactoring while maintaining performance and visual consistency. Enabled non-technical stakeholders to manage and update content independently through a robust CMS integration.',
+    problem: 'Legacy static homepage lacked content management flexibility, requiring developer involvement for any content updates. Team needed a scalable solution that decouples content management from frontend code while preserving performance and design consistency.',
+    approach: 'Collaborated with the team, received tasks and CMS architecture specifications from the product owner. Invested time learning the existing codebase and frontend structure to understand dependencies and legacy patterns. Implemented Storyblok headless CMS integration with React/Next.js, refactored component structure to be CMS-driven, and created content schemas for dynamic data retrieval. Applied modern content management best practices and shared knowledge with team members throughout the migration process.',
+    outcome: 'Successfully delivered a fully functional CMS-driven portfolio enabling content editors to manage pages, projects, and updates without technical knowledge. Improved team productivity through reduced maintenance overhead and established scalable architecture for future content expansion. Demonstrated strong learning capability and collaborative development practices.',
+    category: 'commercial',
+    projectCategory: 'software',
+    technologies: ['React', 'Next.js', 'Storyblok', 'TypeScript', 'TailwindCSS', 'Headless CMS'],
+    projectUrl: 'https://www.richardle.com.au/',
+    team: 'Software development team',
+    role: 'Full-stack Developer',
+    responsibilities: [
+      'Successfully learned existing codebase and legacy implementation patterns',
+      'Implemented Storyblok headless CMS integration with React/Next.js architecture',
+      'Refactored components to consume CMS-driven content dynamically',
+      'Designed and implemented content schemas for optimal data structure',
+      'Maintained performance optimization and SEO during migration process',
+      'Collaborated with team members and received guidance from product owner'
+    ],
+    period: '12/2025 - Current',
+    imageUrl: '/images/projects/richard-le-storyblok.png',
+    featured: false,
+    status: 'in-progress'
+  },
+  {
     id: 'portfolio-website',
     title: 'Personal Portfolio Website',
     shortDescription: 'Designed and developed a responsive portfolio website to showcase skills, resume, and projects.',
