@@ -82,6 +82,36 @@ export const mockProjects: Project[] = [
     status: 'completed'
   },
   {
+    id: 'job-tracker',
+    title: 'Job Tracker Application',
+    shortDescription: 'A full-stack job application management system to organize and track multiple job applications in one place.',
+    fullDescription: 'Built a comprehensive job tracking application to help job seekers manage multiple applications across different companies and roles. The application provides a clean interface for organizing job applications by search periods, tracking interview progress through different statuses, and maintaining detailed notes. Created with both a responsive React frontend and ASP.NET Core backend for flexible deployment options.',
+    problem: 'Job seekers managing multiple applications across different companies need a centralized system to track applications, monitor interview progress, and organize outcomes. Without proper organization, it\'s easy to lose track of applications, interview schedules, and feedback from different companies.',
+    approach: 'Built a full-stack application with React 18 and Vite for fast, responsive frontend development and ASP.NET Core 8 for robust backend services. Implemented JWT authentication for secure access, Entity Framework Core for efficient data management, and responsive Tailwind CSS design. Created mock data system for instant demos without backend setup. Included features for organizing applications by job search periods, tracking status lifecycle (Applied, Interviewing, Offered, Accepted, Rejected), and toggling between dark and light themes.',
+    outcome: 'Successfully delivered a fully functional job tracking application with clean UI/UX, accessible from desktop to mobile devices. Application supports both frontend-only demo mode with mock data and full-stack deployment with persistent storage. Ready for production use with support for user authentication and multi-user scenarios.',
+    category: 'personal',
+    projectCategory: 'software',
+    technologies: ['React 18', 'Vite', 'Tailwind CSS', 'ASP.NET Core 8', 'Entity Framework Core', 'JWT Authentication', 'SQLite', 'PostgreSQL'],
+    githubUrl: 'https://github.com/id-nynt/260001_JobTracker',
+    projectUrl: 'https://260001-job-tracker.vercel.app/',
+    team: 'Individual project',
+    role: 'Full-stack Developer',
+    responsibilities: [
+      'Successfully designed and built responsive React frontend with Vite for optimal performance',
+      'Implemented ASP.NET Core 8 backend with Entity Framework Core for robust data management',
+      'Created JWT authentication system for secure user access and multi-user support',
+      'Built job application management features with full CRUD operations',
+      'Implemented status tracking and job search period organization system',
+      'Developed dark/light theme switching with persistent user preferences',
+      'Created mock data system enabling instant demo without backend setup',
+      'Deployed frontend to production using Vercel for global availability'
+    ],
+    period: '01/2026 - 03/2026',
+    imageUrl: '/images/projects/job-tracker.png',
+    featured: false,
+    status: 'completed'
+  },
+  {
     id: 'shakespeare-chatbot',
     title: '(University) Shakespeare Literature Chatbot',
     shortDescription: 'Built a domain-specific intelligent chatbot to answer questions about Shakespeare\'s plays using RAG.',
