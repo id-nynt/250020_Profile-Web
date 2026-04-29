@@ -112,6 +112,35 @@ export const mockProjects: Project[] = [
     status: 'completed'
   },
   {
+    id: 'twitter-classification',
+    title: '(University) Human vs Non-Human Twitter Account Classification',
+    shortDescription: 'Big data analytics project to distinguish human accounts from bots/brands on Twitter using machine learning classification.',
+    fullDescription: 'Conducted comprehensive machine learning analysis on 25,450+ Twitter profiles to classify human vs. non-human (bot/brand) accounts. Built a production-grade ML pipeline combining supervised learning (XGBoost), unsupervised clustering (K-Means), and multi-modal feature engineering (textual, behavioral, structural). Achieved 80.45% classification accuracy with detailed persona discovery and feature importance analysis for misinformation detection at scale.',
+    problem: 'Misclassified Twitter profiles undermine platform credibility and amplify misinformation. Needed an automated system to distinguish genuine human accounts from bots and brand accounts at scale, reducing manual moderation overhead while improving content filtering accuracy across millions of profiles.',
+    approach: 'Implemented comprehensive multi-modal ML pipeline with three complementary data components: textual features (5,000+ TF-IDF vectors), behavioral metrics (18 features including activity patterns and engagement ratios), and structural signals (profile metadata and customization). Combined XGBoost classification with K-Means unsupervised clustering to discover 9 distinct user personas. Performed stratified 5-fold cross-validation, ROC-AUC analysis, and anomaly detection via regression for robust evaluation on imbalanced real-world data.',
+    outcome: 'Successfully built production-ready Twitter account classifier achieving 80.45% accuracy (ROC-AUC: 0.8535) on imbalanced dataset. Identified key discriminative features and extracted 9 behavioral personas revealing distinct human vs. bot patterns. Delivered actionable insights on high-risk indicators (>100 tweets/day, <30% engagement) and generated comprehensive visualizations demonstrating multi-view analysis for platform security teams.',
+    category: 'academic',
+    projectCategory: 'data-ml',
+    technologies: ['Python', 'XGBoost', 'scikit-learn', 'Pandas', 'NumPy', 'TF-IDF', 'K-Means', 'PCA', 'Jupyter', 'Matplotlib', 'Seaborn'],
+    githubUrl: 'https://github.com/id-nynt/250027_twitter_classification',
+    team: '6-member research team',
+    role: 'Machine Learning Engineer',
+    responsibilities: [
+      'Successfully designed multi-modal ML architecture combining textual, behavioral, and structural features',
+      'Implemented XGBoost classifier with hyperparameter optimization achieving 80.45% accuracy',
+      'Performed comprehensive data preprocessing handling 25K+ records with UTF-8 encoding and missing value imputation',
+      'Executed K-Means unsupervised clustering discovering 9 distinct user personas with behavioral interpretation',
+      'Conducted stratified cross-validation analysis and ROC-AUC evaluation on imbalanced data',
+      'Extracted feature importance from XGBoost revealing top discriminative signals for bot detection',
+      'Generated professional visualizations including ROC curves, confusion matrices, and clustering analysis',
+      'Documented findings with actionable recommendations for platform security and user safety'
+    ],
+    period: '02/2025 - 05/2025',
+    imageUrl: '/images/projects/twitter-classification.png',
+    featured: true,
+    status: 'completed'
+  },
+  {
     id: 'shakespeare-chatbot',
     title: '(University) Shakespeare Literature Chatbot',
     shortDescription: 'Built a domain-specific intelligent chatbot to answer questions about Shakespeare\'s plays using RAG.',
