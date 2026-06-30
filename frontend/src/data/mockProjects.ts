@@ -141,6 +141,35 @@ export const mockProjects: Project[] = [
     status: 'completed'
   },
   {
+    id: 'recording-studio-booking',
+    title: '(University) MyRecordingStudio - Booking System',
+    shortDescription: 'Object-oriented PHP/MySQL web application for managing recording studio bookings with role-based access control.',
+    fullDescription: 'Built a complete recording studio booking management system using object-oriented PHP principles and MySQL database. The application provides administrators with studio management capabilities and enables clients to search locations, check real-time availability, and manage their bookings. Implemented secure authentication, role-based authorization, and business logic for availability tracking with overlap detection.',
+    problem: 'Recording studios need an efficient system to manage bookings, track studio availability across multiple locations, and handle client reservations. Manual booking systems lead to double-bookings and poor resource utilization. Required an automated solution with real-time availability checking and role-based access for administrators and clients.',
+    approach: 'Developed object-oriented PHP application with MySQLi database using XAMPP stack. Implemented secure authentication with Bcrypt password hashing and session-based authorization. Built comprehensive business logic for availability checking, booking management, and cost calculation. Designed database schema with proper relationships (Users, Locations, Bookings) and integrity constraints. Applied SQL prepared statements throughout to prevent injection attacks and implemented multi-layer input validation.',
+    outcome: 'Successfully delivered a fully functional booking system with secure role-based access control, real-time availability detection, and complete CRUD operations for bookings and locations. Admin users can manage studios and track system-wide bookings while clients can efficiently browse locations and manage their reservations with automated conflict resolution.',
+    category: 'academic',
+    projectCategory: 'software',
+    technologies: ['PHP (OOP)', 'MySQL', 'MySQLi', 'HTML', 'CSS', 'Bcrypt', 'XAMPP', 'Sessions'],
+    githubUrl: 'https://github.com/id-nynt/260012_MyRecordingStudio',
+    team: 'Individual project',
+    role: 'Full-stack Developer',
+    responsibilities: [
+      'Successfully designed and implemented object-oriented PHP architecture with MVC patterns',
+      'Created MySQL database schema with proper relationships and business logic constraints',
+      'Implemented secure authentication system using Bcrypt hashing and PHP sessions',
+      'Built real-time availability checking with overlap detection across multiple studios',
+      'Developed booking management features with create, read, update, delete operations',
+      'Enforced role-based access control for administrators and clients',
+      'Applied SQL prepared statements and input validation to prevent security vulnerabilities',
+      'Implemented business logic including cost calculation and status flow management'
+    ],
+    period: '04/2026 - 05/2026',
+    imageUrl: '/images/projects/recording-studio.png',
+    featured: false,
+    status: 'completed'
+  },
+  {
     id: 'shakespeare-chatbot',
     title: '(University) Shakespeare Literature Chatbot',
     shortDescription: 'Built a domain-specific intelligent chatbot to answer questions about Shakespeare\'s plays using RAG.',
