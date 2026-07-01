@@ -151,6 +151,7 @@ export const mockProjects: Project[] = [
     category: 'academic',
     projectCategory: 'software',
     technologies: ['PHP (OOP)', 'MySQL', 'MySQLi', 'HTML', 'CSS', 'Bcrypt', 'XAMPP', 'Sessions'],
+    projectUrl: 'https://myrecordingstudio.infinityfree.me/',
     githubUrl: 'https://github.com/id-nynt/260012_MyRecordingStudio',
     team: 'Individual project',
     role: 'Full-stack Developer',

@@ -4,7 +4,7 @@ const Skills = () => {
     {
       category: 'Programming & Core',
       icon: '💻',
-      skills: ['Python', 'C#', 'JavaScript']
+      skills: ['Python', 'C#', 'PHP', 'JavaScript']
     },
     {
       category: 'Backend & APIs',
