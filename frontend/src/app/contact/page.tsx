@@ -107,7 +107,7 @@ export default function ContactPage() {
                 Quick Facts
               </h3>
               <div className="text-primary-700 space-y-2">
-                <p>🎓 Master of Computer Science (Expected July 2026)</p>
+                <p>🎓 Master of Computer Science (July 2026)</p>
                 <p>📍 Available for opportunities in NSW, Australia</p>
                 <p>💼 Open to remote, hybrid, or on-site positions</p>
                 <p>🚀 Passionate about learning new technologies</p>

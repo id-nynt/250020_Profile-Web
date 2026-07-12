@@ -34,7 +34,7 @@ const Education = () => {
                 University of Wollongong, NSW
               </div>
               <div className="text-gray-300 mb-4">
-                07/2024 – Expected 07/2026
+                07/2024 – 07/2026
               </div>
             </div>
 
