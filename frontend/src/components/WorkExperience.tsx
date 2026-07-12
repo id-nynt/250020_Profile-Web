@@ -14,15 +14,15 @@ const WorkExperience = () => {
       ]
     },
     {
-      title: 'Customer Service',
-      company: 'Various Restaurants in Wollongong',
-      period: '09/2024 – Current',
+      title: 'University Tutor',
+      company: 'University of Wollongong',
+      period: '03/2026 – Current',
       location: 'Wollongong, NSW',
-      description: 'Customer-facing roles at Viet Viral, Jin\'s Place, and Bangkok Balcony',
+      description: 'Tutoring roles in Computer Science at the University of Wollongong',
       responsibilities: [
-        'Worked effectively in fast-paced environments with strong teamwork and communication',
-        'Followed procedures accurately while adapting to changing priorities and customer needs',
-        'Developed excellent time-management and interpersonal skills'
+        'Guided students in understanding programming concepts, software development practices, and debugging techniques during laboratory sessions',
+        'Assisted students in analysing programming problems and developing structured solutions',
+        'Communicated technical concepts clearly while supporting practical learning and problem solving'
       ]
     },
     {
@@ -32,9 +32,10 @@ const WorkExperience = () => {
       location: 'Vietnam',
       description: 'Professional interior design experience in architectural firms',
       responsibilities: [
-        'Interacted effectively with stakeholders throughout all stages of projects',
+        'Delivered 60+ architectural and interior design projects, leading 15+ projects or major workstreams while balancing technical requirements, design quality, budgets, and deadlines',
+        'Coordinated with engineers, contractors, and stakeholders to deliver high-quality outcomes throughout all stages of projects',
         'Managed design requirements, design documentation, and project deadlines with attention to detail',
-        'Developed strong client communication and project management skills'
+        'Experienced in many tender submissions due to strong reliability, accountability, and ability to perform under pressure'
       ]
     }
   ]
