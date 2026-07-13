@@ -14,7 +14,7 @@ const WorkExperience = () => {
       ]
     },
     {
-      title: 'University Tutor',
+      title: 'Academic Lab Tutor',
       company: 'University of Wollongong',
       period: '03/2026 – Current',
       location: 'Wollongong, NSW',
